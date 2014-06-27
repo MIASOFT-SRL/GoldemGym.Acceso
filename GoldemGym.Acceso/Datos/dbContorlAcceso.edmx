@@ -1,0 +1,1876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbControlAccesoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="dbControlAccesoModelStoreContainer">
+          <EntitySet Name="ACGroup" EntityType="dbControlAccesoModel.Store.ACGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ACTimeZones" EntityType="dbControlAccesoModel.Store.ACTimeZones" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ACUnlockComb" EntityType="dbControlAccesoModel.Store.ACUnlockComb" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlarmLog" EntityType="dbControlAccesoModel.Store.AlarmLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AttParam" EntityType="dbControlAccesoModel.Store.AttParam" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AuditedExc" EntityType="dbControlAccesoModel.Store.AuditedExc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AUTHDEVICE" EntityType="dbControlAccesoModel.Store.AUTHDEVICE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CHECKEXACT" EntityType="dbControlAccesoModel.Store.CHECKEXACT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CHECKINOUT" EntityType="dbControlAccesoModel.Store.CHECKINOUT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DEPARTMENTS" EntityType="dbControlAccesoModel.Store.DEPARTMENTS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeptUsedSchs" EntityType="dbControlAccesoModel.Store.DeptUsedSchs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmOpLog" EntityType="dbControlAccesoModel.Store.EmOpLog" store:Type="Tables" store:Schema="dbo" store:Name="EmOpLog">
+            <DefiningQuery>SELECT 
+      [EmOpLog].[ID] AS [ID], 
+      [EmOpLog].[USERID] AS [USERID], 
+      [EmOpLog].[OperateTime] AS [OperateTime], 
+      [EmOpLog].[manipulationID] AS [manipulationID], 
+      [EmOpLog].[Params1] AS [Params1], 
+      [EmOpLog].[Params2] AS [Params2], 
+      [EmOpLog].[Params3] AS [Params3], 
+      [EmOpLog].[Params4] AS [Params4], 
+      [EmOpLog].[SensorId] AS [SensorId]
+      FROM [dbo].[EmOpLog] AS [EmOpLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FaceTemp" EntityType="dbControlAccesoModel.Store.FaceTemp" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HOLIDAYS" EntityType="dbControlAccesoModel.Store.HOLIDAYS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LeaveClass" EntityType="dbControlAccesoModel.Store.LeaveClass" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LeaveClass1" EntityType="dbControlAccesoModel.Store.LeaveClass1" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Machines" EntityType="dbControlAccesoModel.Store.Machines" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NUM_RUN" EntityType="dbControlAccesoModel.Store.NUM_RUN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NUM_RUN_DEIL" EntityType="dbControlAccesoModel.Store.NUM_RUN_DEIL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ReportItem" EntityType="dbControlAccesoModel.Store.ReportItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SchClass" EntityType="dbControlAccesoModel.Store.SchClass" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SECURITYDETAILS" EntityType="dbControlAccesoModel.Store.SECURITYDETAILS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerLog" EntityType="dbControlAccesoModel.Store.ServerLog" store:Type="Tables" store:Schema="dbo" store:Name="ServerLog">
+            <DefiningQuery>SELECT 
+      [ServerLog].[ID] AS [ID], 
+      [ServerLog].[EVENT] AS [EVENT], 
+      [ServerLog].[USERID] AS [USERID], 
+      [ServerLog].[EnrollNumber] AS [EnrollNumber], 
+      [ServerLog].[parameter] AS [parameter], 
+      [ServerLog].[EVENTTIME] AS [EVENTTIME], 
+      [ServerLog].[SENSORID] AS [SENSORID], 
+      [ServerLog].[OPERATOR] AS [OPERATOR]
+      FROM [dbo].[ServerLog] AS [ServerLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SHIFT" EntityType="dbControlAccesoModel.Store.SHIFT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SystemLog" EntityType="dbControlAccesoModel.Store.SystemLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TBSMSALLOT" EntityType="dbControlAccesoModel.Store.TBSMSALLOT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TBSMSINFO" EntityType="dbControlAccesoModel.Store.TBSMSINFO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TEMPLATE" EntityType="dbControlAccesoModel.Store.TEMPLATE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USER_OF_RUN" EntityType="dbControlAccesoModel.Store.USER_OF_RUN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USER_SPEDAY" EntityType="dbControlAccesoModel.Store.USER_SPEDAY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USER_TEMP_SCH" EntityType="dbControlAccesoModel.Store.USER_TEMP_SCH" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserACMachines" EntityType="dbControlAccesoModel.Store.UserACMachines" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserACPrivilege" EntityType="dbControlAccesoModel.Store.UserACPrivilege" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USERINFO" EntityType="dbControlAccesoModel.Store.USERINFO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsersMachines" EntityType="dbControlAccesoModel.Store.UsersMachines" store:Type="Tables" store:Schema="dbo" store:Name="UsersMachines">
+            <DefiningQuery>SELECT 
+      [UsersMachines].[ID] AS [ID], 
+      [UsersMachines].[USERID] AS [USERID], 
+      [UsersMachines].[DEVICEID] AS [DEVICEID]
+      FROM [dbo].[UsersMachines] AS [UsersMachines]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UserUpdates" EntityType="dbControlAccesoModel.Store.UserUpdates" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserUsedSClasses" EntityType="dbControlAccesoModel.Store.UserUsedSClasses" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ACGroup">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="smallint" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="30" />
+          <Property Name="TimeZone1" Type="smallint" />
+          <Property Name="TimeZone2" Type="smallint" />
+          <Property Name="TimeZone3" Type="smallint" />
+          <Property Name="holidayvaild" Type="bit" />
+          <Property Name="verifystyle" Type="int" />
+        </EntityType>
+        <EntityType Name="ACTimeZones">
+          <Key>
+            <PropertyRef Name="TimeZoneID" />
+          </Key>
+          <Property Name="TimeZoneID" Type="smallint" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="30" />
+          <Property Name="SunStart" Type="datetime" />
+          <Property Name="SunEnd" Type="datetime" />
+          <Property Name="MonStart" Type="datetime" />
+          <Property Name="MonEnd" Type="datetime" />
+          <Property Name="TuesStart" Type="datetime" />
+          <Property Name="TuesEnd" Type="datetime" />
+          <Property Name="WedStart" Type="datetime" />
+          <Property Name="WedEnd" Type="datetime" />
+          <Property Name="ThursStart" Type="datetime" />
+          <Property Name="ThursEnd" Type="datetime" />
+          <Property Name="FriStart" Type="datetime" />
+          <Property Name="FriEnd" Type="datetime" />
+          <Property Name="SatStart" Type="datetime" />
+          <Property Name="SatEnd" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ACUnlockComb">
+          <Key>
+            <PropertyRef Name="UnlockCombID" />
+          </Key>
+          <Property Name="UnlockCombID" Type="smallint" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="30" />
+          <Property Name="Group01" Type="smallint" />
+          <Property Name="Group02" Type="smallint" />
+          <Property Name="Group03" Type="smallint" />
+          <Property Name="Group04" Type="smallint" />
+          <Property Name="Group05" Type="smallint" />
+        </EntityType>
+        <EntityType Name="AlarmLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Operator" Type="varchar" MaxLength="20" />
+          <Property Name="EnrollNumber" Type="varchar" MaxLength="30" />
+          <Property Name="LogTime" Type="datetime" />
+          <Property Name="MachineAlias" Type="varchar" MaxLength="20" />
+          <Property Name="AlarmType" Type="int" />
+        </EntityType>
+        <EntityType Name="AttParam">
+          <Key>
+            <PropertyRef Name="PARANAME" />
+          </Key>
+          <Property Name="PARANAME" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PARATYPE" Type="varchar" MaxLength="2" />
+          <Property Name="PARAVALUE" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="AuditedExc">
+          <Key>
+            <PropertyRef Name="AEID" />
+          </Key>
+          <Property Name="AEID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="CheckTime" Type="datetime" Nullable="false" />
+          <Property Name="NewExcID" Type="int" />
+          <Property Name="IsLeave" Type="smallint" />
+          <Property Name="UName" Type="varchar" MaxLength="20" />
+          <Property Name="UTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AUTHDEVICE">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="MachineID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="MachineID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CHECKEXACT">
+          <Key>
+            <PropertyRef Name="EXACTID" />
+          </Key>
+          <Property Name="EXACTID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="CHECKTIME" Type="datetime" />
+          <Property Name="CHECKTYPE" Type="varchar" MaxLength="2" />
+          <Property Name="ISADD" Type="smallint" />
+          <Property Name="YUYIN" Type="varchar" MaxLength="25" />
+          <Property Name="ISMODIFY" Type="smallint" />
+          <Property Name="ISDELETE" Type="smallint" />
+          <Property Name="INCOUNT" Type="smallint" />
+          <Property Name="ISCOUNT" Type="smallint" />
+          <Property Name="MODIFYBY" Type="varchar" MaxLength="20" />
+          <Property Name="DATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CHECKINOUT">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="CHECKTIME" />
+          </Key>
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="CHECKTIME" Type="datetime" Nullable="false" />
+          <Property Name="CHECKTYPE" Type="varchar" MaxLength="1" />
+          <Property Name="VERIFYCODE" Type="int" />
+          <Property Name="SENSORID" Type="varchar" MaxLength="5" />
+          <Property Name="Memoinfo" Type="varchar" MaxLength="30" />
+          <Property Name="WorkCode" Type="int" />
+          <Property Name="sn" Type="varchar" MaxLength="20" />
+          <Property Name="UserExtFmt" Type="smallint" />
+        </EntityType>
+        <EntityType Name="DEPARTMENTS">
+          <Key>
+            <PropertyRef Name="DEPTID" />
+          </Key>
+          <Property Name="DEPTID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DEPTNAME" Type="varchar" MaxLength="30" />
+          <Property Name="SUPDEPTID" Type="int" Nullable="false" />
+          <Property Name="InheritParentSch" Type="smallint" />
+          <Property Name="InheritDeptSch" Type="smallint" />
+          <Property Name="InheritDeptSchClass" Type="smallint" />
+          <Property Name="AutoSchPlan" Type="smallint" />
+          <Property Name="InLate" Type="smallint" />
+          <Property Name="OutEarly" Type="smallint" />
+          <Property Name="InheritDeptRule" Type="smallint" />
+          <Property Name="MinAutoSchInterval" Type="int" />
+          <Property Name="RegisterOT" Type="smallint" />
+          <Property Name="DefaultSchId" Type="int" Nullable="false" />
+          <Property Name="ATT" Type="smallint" />
+          <Property Name="Holiday" Type="smallint" />
+          <Property Name="OverTime" Type="smallint" />
+        </EntityType>
+        <EntityType Name="DeptUsedSchs">
+          <Key>
+            <PropertyRef Name="DeptId" />
+            <PropertyRef Name="SchId" />
+          </Key>
+          <Property Name="DeptId" Type="int" Nullable="false" />
+          <Property Name="SchId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'dbControlAcceso.dbo.EmOpLog' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="EmOpLog">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="OperateTime" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="OperateTime" Type="datetime" Nullable="false" />
+          <Property Name="manipulationID" Type="int" />
+          <Property Name="Params1" Type="int" />
+          <Property Name="Params2" Type="int" />
+          <Property Name="Params3" Type="int" />
+          <Property Name="Params4" Type="int" />
+          <Property Name="SensorId" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="FaceTemp">
+          <Key>
+            <PropertyRef Name="TEMPLATEID" />
+          </Key>
+          <Property Name="TEMPLATEID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USERNO" Type="varchar" MaxLength="24" />
+          <Property Name="SIZE" Type="int" />
+          <Property Name="pin" Type="int" />
+          <Property Name="FACEID" Type="int" />
+          <Property Name="VALID" Type="int" />
+          <Property Name="RESERVE" Type="int" />
+          <Property Name="ACTIVETIME" Type="int" />
+          <Property Name="VFCOUNT" Type="int" />
+          <Property Name="TEMPLATE" Type="image" />
+        </EntityType>
+        <EntityType Name="HOLIDAYS">
+          <Key>
+            <PropertyRef Name="HOLIDAYID" />
+          </Key>
+          <Property Name="HOLIDAYID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HOLIDAYNAME" Type="varchar" MaxLength="20" />
+          <Property Name="HOLIDAYYEAR" Type="smallint" />
+          <Property Name="HOLIDAYMONTH" Type="smallint" />
+          <Property Name="HOLIDAYDAY" Type="smallint" />
+          <Property Name="STARTTIME" Type="datetime" />
+          <Property Name="DURATION" Type="smallint" />
+          <Property Name="HOLIDAYTYPE" Type="smallint" />
+          <Property Name="XINBIE" Type="varchar" MaxLength="4" />
+          <Property Name="MINZU" Type="varchar" MaxLength="50" />
+          <Property Name="DeptID" Type="smallint" />
+        </EntityType>
+        <EntityType Name="LeaveClass">
+          <Key>
+            <PropertyRef Name="LeaveId" />
+          </Key>
+          <Property Name="LeaveId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LeaveName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MinUnit" Type="float" Nullable="false" />
+          <Property Name="Unit" Type="smallint" Nullable="false" />
+          <Property Name="RemaindProc" Type="smallint" Nullable="false" />
+          <Property Name="RemaindCount" Type="smallint" Nullable="false" />
+          <Property Name="ReportSymbol" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="Deduct" Type="float" Nullable="false" />
+          <Property Name="Color" Type="int" Nullable="false" />
+          <Property Name="Classify" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LeaveClass1">
+          <Key>
+            <PropertyRef Name="LeaveId" />
+          </Key>
+          <Property Name="LeaveId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LeaveName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MinUnit" Type="float" Nullable="false" />
+          <Property Name="Unit" Type="smallint" Nullable="false" />
+          <Property Name="RemaindProc" Type="smallint" Nullable="false" />
+          <Property Name="RemaindCount" Type="smallint" Nullable="false" />
+          <Property Name="ReportSymbol" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="Deduct" Type="float" Nullable="false" />
+          <Property Name="LeaveType" Type="smallint" Nullable="false" />
+          <Property Name="Color" Type="int" Nullable="false" />
+          <Property Name="Classify" Type="smallint" Nullable="false" />
+          <Property Name="Calc" Type="text" />
+        </EntityType>
+        <EntityType Name="Machines">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MachineAlias" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ConnectType" Type="int" Nullable="false" />
+          <Property Name="IP" Type="varchar" MaxLength="20" />
+          <Property Name="SerialPort" Type="int" />
+          <Property Name="Port" Type="int" />
+          <Property Name="Baudrate" Type="int" />
+          <Property Name="MachineNumber" Type="int" Nullable="false" />
+          <Property Name="IsHost" Type="bit" />
+          <Property Name="Enabled" Type="bit" />
+          <Property Name="CommPassword" Type="varchar" MaxLength="12" />
+          <Property Name="UILanguage" Type="smallint" />
+          <Property Name="DateFormat" Type="smallint" />
+          <Property Name="InOutRecordWarn" Type="smallint" />
+          <Property Name="Idle" Type="smallint" />
+          <Property Name="Voice" Type="smallint" />
+          <Property Name="managercount" Type="smallint" />
+          <Property Name="usercount" Type="smallint" />
+          <Property Name="fingercount" Type="smallint" />
+          <Property Name="SecretCount" Type="smallint" />
+          <Property Name="FirmwareVersion" Type="varchar" MaxLength="20" />
+          <Property Name="ProductType" Type="varchar" MaxLength="20" />
+          <Property Name="LockControl" Type="smallint" />
+          <Property Name="Purpose" Type="smallint" />
+          <Property Name="ProduceKind" Type="int" />
+          <Property Name="sn" Type="varchar" MaxLength="20" />
+          <Property Name="PhotoStamp" Type="varchar" MaxLength="20" />
+          <Property Name="IsIfChangeConfigServer2" Type="int" />
+        </EntityType>
+        <EntityType Name="NUM_RUN">
+          <Key>
+            <PropertyRef Name="NUM_RUNID" />
+          </Key>
+          <Property Name="NUM_RUNID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OLDID" Type="int" />
+          <Property Name="NAME" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="STARTDATE" Type="datetime" />
+          <Property Name="ENDDATE" Type="datetime" />
+          <Property Name="CYLE" Type="smallint" />
+          <Property Name="UNITS" Type="smallint" />
+        </EntityType>
+        <EntityType Name="NUM_RUN_DEIL">
+          <Key>
+            <PropertyRef Name="NUM_RUNID" />
+            <PropertyRef Name="STARTTIME" />
+            <PropertyRef Name="SDAYS" />
+          </Key>
+          <Property Name="NUM_RUNID" Type="smallint" Nullable="false" />
+          <Property Name="STARTTIME" Type="datetime" Nullable="false" />
+          <Property Name="ENDTIME" Type="datetime" />
+          <Property Name="SDAYS" Type="smallint" Nullable="false" />
+          <Property Name="EDAYS" Type="smallint" />
+          <Property Name="SCHCLASSID" Type="int" />
+          <Property Name="OverTime" Type="int" />
+        </EntityType>
+        <EntityType Name="ReportItem">
+          <Key>
+            <PropertyRef Name="RIID" />
+          </Key>
+          <Property Name="RIID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RIIndex" Type="int" />
+          <Property Name="ShowIt" Type="smallint" />
+          <Property Name="RIName" Type="varchar" MaxLength="12" />
+          <Property Name="UnitName" Type="varchar" MaxLength="6" />
+          <Property Name="Formula" Type="image" Nullable="false" />
+          <Property Name="CalcBySchClass" Type="smallint" />
+          <Property Name="StatisticMethod" Type="smallint" />
+          <Property Name="CalcLast" Type="smallint" />
+          <Property Name="Notes" Type="image" />
+        </EntityType>
+        <EntityType Name="SchClass">
+          <Key>
+            <PropertyRef Name="schClassid" />
+          </Key>
+          <Property Name="schClassid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="schName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" Nullable="false" />
+          <Property Name="LateMinutes" Type="int" />
+          <Property Name="EarlyMinutes" Type="int" />
+          <Property Name="CheckIn" Type="int" />
+          <Property Name="CheckOut" Type="int" />
+          <Property Name="CheckInTime1" Type="datetime" />
+          <Property Name="CheckInTime2" Type="datetime" />
+          <Property Name="CheckOutTime1" Type="datetime" />
+          <Property Name="CheckOutTime2" Type="datetime" />
+          <Property Name="Color" Type="int" />
+          <Property Name="AutoBind" Type="smallint" />
+          <Property Name="WorkDay" Type="float" />
+          <Property Name="SensorID" Type="varchar" MaxLength="5" />
+          <Property Name="WorkMins" Type="float" />
+        </EntityType>
+        <EntityType Name="SECURITYDETAILS">
+          <Key>
+            <PropertyRef Name="SECURITYDETAILID" />
+          </Key>
+          <Property Name="SECURITYDETAILID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="DEPTID" Type="smallint" />
+          <Property Name="SCHEDULE" Type="smallint" />
+          <Property Name="USERINFO" Type="smallint" />
+          <Property Name="ENROLLFINGERS" Type="smallint" />
+          <Property Name="REPORTVIEW" Type="smallint" />
+          <Property Name="REPORT" Type="varchar" MaxLength="10" />
+          <Property Name="ReadOnly" Type="bit" />
+          <Property Name="FullControl" Type="bit" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'dbControlAcceso.dbo.ServerLog' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="ServerLog">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="EVENT" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="EVENTTIME" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EVENT" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="EnrollNumber" Type="varchar" MaxLength="30" />
+          <Property Name="parameter" Type="smallint" />
+          <Property Name="EVENTTIME" Type="datetime" Nullable="false" />
+          <Property Name="SENSORID" Type="varchar" MaxLength="5" />
+          <Property Name="OPERATOR" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SHIFT">
+          <Key>
+            <PropertyRef Name="SHIFTID" />
+          </Key>
+          <Property Name="SHIFTID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="varchar" MaxLength="20" />
+          <Property Name="USHIFTID" Type="int" />
+          <Property Name="STARTDATE" Type="datetime" Nullable="false" />
+          <Property Name="ENDDATE" Type="datetime" />
+          <Property Name="RUNNUM" Type="smallint" />
+          <Property Name="SCH1" Type="int" />
+          <Property Name="SCH2" Type="int" />
+          <Property Name="SCH3" Type="int" />
+          <Property Name="SCH4" Type="int" />
+          <Property Name="SCH5" Type="int" />
+          <Property Name="SCH6" Type="int" />
+          <Property Name="SCH7" Type="int" />
+          <Property Name="SCH8" Type="int" />
+          <Property Name="SCH9" Type="int" />
+          <Property Name="SCH10" Type="int" />
+          <Property Name="SCH11" Type="int" />
+          <Property Name="SCH12" Type="int" />
+          <Property Name="CYCLE" Type="smallint" />
+          <Property Name="UNITS" Type="smallint" />
+        </EntityType>
+        <EntityType Name="SystemLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Operator" Type="varchar" MaxLength="20" />
+          <Property Name="LogTime" Type="datetime" />
+          <Property Name="MachineAlias" Type="varchar" MaxLength="20" />
+          <Property Name="LogTag" Type="smallint" />
+          <Property Name="LogDescr" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBSMSALLOT">
+          <Key>
+            <PropertyRef Name="REFERENCE" />
+          </Key>
+          <Property Name="REFERENCE" Type="int" Nullable="false" />
+          <Property Name="SMSREF" Type="int" Nullable="false" />
+          <Property Name="USERREF" Type="int" Nullable="false" />
+          <Property Name="GENTM" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TBSMSINFO">
+          <Key>
+            <PropertyRef Name="REFERENCE" />
+          </Key>
+          <Property Name="REFERENCE" Type="int" Nullable="false" />
+          <Property Name="SMSID" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="SMSINDEX" Type="int" Nullable="false" />
+          <Property Name="SMSTYPE" Type="int" />
+          <Property Name="SMSCONTENT" Type="text" />
+          <Property Name="SMSSTARTTM" Type="varchar" MaxLength="32" />
+          <Property Name="SMSTMLENG" Type="int" />
+          <Property Name="GENTM" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TEMPLATE">
+          <Key>
+            <PropertyRef Name="TEMPLATEID" />
+          </Key>
+          <Property Name="TEMPLATEID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="FINGERID" Type="int" Nullable="false" />
+          <Property Name="TEMPLATE" Type="image" Nullable="false" />
+          <Property Name="TEMPLATE2" Type="image" />
+          <Property Name="TEMPLATE3" Type="image" />
+          <Property Name="BITMAPPICTURE" Type="image" />
+          <Property Name="BITMAPPICTURE2" Type="image" />
+          <Property Name="BITMAPPICTURE3" Type="image" />
+          <Property Name="BITMAPPICTURE4" Type="image" />
+          <Property Name="USETYPE" Type="smallint" />
+          <Property Name="EMACHINENUM" Type="varchar" MaxLength="3" />
+          <Property Name="TEMPLATE1" Type="image" />
+          <Property Name="Flag" Type="smallint" />
+          <Property Name="DivisionFP" Type="smallint" />
+          <Property Name="TEMPLATE4" Type="image" />
+        </EntityType>
+        <EntityType Name="USER_OF_RUN">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="NUM_OF_RUN_ID" />
+            <PropertyRef Name="STARTDATE" />
+            <PropertyRef Name="ENDDATE" />
+          </Key>
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="NUM_OF_RUN_ID" Type="int" Nullable="false" />
+          <Property Name="STARTDATE" Type="datetime" Nullable="false" />
+          <Property Name="ENDDATE" Type="datetime" Nullable="false" />
+          <Property Name="ISNOTOF_RUN" Type="int" />
+          <Property Name="ORDER_RUN" Type="int" />
+        </EntityType>
+        <EntityType Name="USER_SPEDAY">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="STARTSPECDAY" />
+            <PropertyRef Name="DATEID" />
+          </Key>
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="STARTSPECDAY" Type="datetime" Nullable="false" />
+          <Property Name="ENDSPECDAY" Type="datetime" />
+          <Property Name="DATEID" Type="smallint" Nullable="false" />
+          <Property Name="YUANYING" Type="varchar" MaxLength="200" />
+          <Property Name="DATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="USER_TEMP_SCH">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="COMETIME" />
+            <PropertyRef Name="LEAVETIME" />
+          </Key>
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="COMETIME" Type="datetime" Nullable="false" />
+          <Property Name="LEAVETIME" Type="datetime" Nullable="false" />
+          <Property Name="OVERTIME" Type="int" Nullable="false" />
+          <Property Name="TYPE" Type="smallint" />
+          <Property Name="FLAG" Type="smallint" />
+          <Property Name="SCHCLASSID" Type="int" />
+        </EntityType>
+        <EntityType Name="UserACMachines">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="Deviceid" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Deviceid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserACPrivilege">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="DeviceID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="DeviceID" Type="int" Nullable="false" />
+          <Property Name="ACGroupID" Type="int" />
+          <Property Name="IsUseGroup" Type="bit" />
+          <Property Name="TimeZone1" Type="int" />
+          <Property Name="TimeZone2" Type="int" />
+          <Property Name="TimeZone3" Type="int" />
+          <Property Name="verifystyle" Type="int" />
+        </EntityType>
+        <EntityType Name="USERINFO">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BADGENUMBER" Type="varchar" Nullable="false" MaxLength="24" />
+          <Property Name="SSN" Type="varchar" MaxLength="20" />
+          <Property Name="NAME" Type="varchar" MaxLength="40" />
+          <Property Name="GENDER" Type="varchar" MaxLength="8" />
+          <Property Name="TITLE" Type="varchar" MaxLength="20" />
+          <Property Name="PAGER" Type="varchar" MaxLength="20" />
+          <Property Name="BIRTHDAY" Type="datetime" />
+          <Property Name="HIREDDAY" Type="datetime" />
+          <Property Name="STREET" Type="varchar" MaxLength="80" />
+          <Property Name="CITY" Type="varchar" MaxLength="2" />
+          <Property Name="STATE" Type="varchar" MaxLength="2" />
+          <Property Name="ZIP" Type="varchar" MaxLength="12" />
+          <Property Name="OPHONE" Type="varchar" MaxLength="20" />
+          <Property Name="FPHONE" Type="varchar" MaxLength="20" />
+          <Property Name="VERIFICATIONMETHOD" Type="smallint" />
+          <Property Name="DEFAULTDEPTID" Type="smallint" />
+          <Property Name="SECURITYFLAGS" Type="smallint" />
+          <Property Name="ATT" Type="smallint" Nullable="false" />
+          <Property Name="INLATE" Type="smallint" Nullable="false" />
+          <Property Name="OUTEARLY" Type="smallint" Nullable="false" />
+          <Property Name="OVERTIME" Type="smallint" Nullable="false" />
+          <Property Name="SEP" Type="smallint" Nullable="false" />
+          <Property Name="HOLIDAY" Type="smallint" Nullable="false" />
+          <Property Name="MINZU" Type="varchar" MaxLength="8" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="20" />
+          <Property Name="LUNCHDURATION" Type="smallint" Nullable="false" />
+          <Property Name="MVerifyPass" Type="varchar" MaxLength="10" />
+          <Property Name="PHOTO" Type="image" />
+          <Property Name="Notes" Type="image" />
+          <Property Name="privilege" Type="int" />
+          <Property Name="InheritDeptSch" Type="smallint" />
+          <Property Name="InheritDeptSchClass" Type="smallint" />
+          <Property Name="AutoSchPlan" Type="smallint" />
+          <Property Name="MinAutoSchInterval" Type="int" />
+          <Property Name="RegisterOT" Type="smallint" />
+          <Property Name="InheritDeptRule" Type="smallint" />
+          <Property Name="EMPRIVILEGE" Type="smallint" />
+          <Property Name="CardNo" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'dbControlAcceso.dbo.UsersMachines' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="UsersMachines">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="DEVICEID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="int" Nullable="false" />
+          <Property Name="DEVICEID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserUpdates">
+          <Key>
+            <PropertyRef Name="UpdateId" />
+          </Key>
+          <Property Name="UpdateId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BadgeNumber" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="UserUsedSClasses">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="SchId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="SchId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'dbControlAcceso.dbo.EXCNOTES' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="EXCNOTES">
+        <Property Name="USERID" Type="int" />
+        <Property Name="ATTDATE" Type="datetime" />
+        <Property Name="NOTES" Type="varchar" MaxLength="200" />
+      </EntityType>
+      Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'dbControlAcceso.dbo.TBKEY' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="TBKEY">
+        <Property Name="PreName" Type="varchar" MaxLength="12" />
+        <Property Name="ONEKEY" Type="int" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbControlAccesoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="dbControlAccesoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACGroup" EntityType="dbControlAccesoModel.ACGroup" />
+          <EntitySet Name="ACTimeZones" EntityType="dbControlAccesoModel.ACTimeZones" />
+          <EntitySet Name="ACUnlockComb" EntityType="dbControlAccesoModel.ACUnlockComb" />
+          <EntitySet Name="AlarmLog" EntityType="dbControlAccesoModel.AlarmLog" />
+          <EntitySet Name="AttParam" EntityType="dbControlAccesoModel.AttParam" />
+          <EntitySet Name="AuditedExc" EntityType="dbControlAccesoModel.AuditedExc" />
+          <EntitySet Name="AUTHDEVICE" EntityType="dbControlAccesoModel.AUTHDEVICE" />
+          <EntitySet Name="CHECKEXACT" EntityType="dbControlAccesoModel.CHECKEXACT" />
+          <EntitySet Name="CHECKINOUT" EntityType="dbControlAccesoModel.CHECKINOUT" />
+          <EntitySet Name="DEPARTMENTS" EntityType="dbControlAccesoModel.DEPARTMENTS" />
+          <EntitySet Name="DeptUsedSchs" EntityType="dbControlAccesoModel.DeptUsedSchs" />
+          <EntitySet Name="EmOpLog" EntityType="dbControlAccesoModel.EmOpLog" />
+          <EntitySet Name="FaceTemp" EntityType="dbControlAccesoModel.FaceTemp" />
+          <EntitySet Name="HOLIDAYS" EntityType="dbControlAccesoModel.HOLIDAYS" />
+          <EntitySet Name="LeaveClass" EntityType="dbControlAccesoModel.LeaveClass" />
+          <EntitySet Name="LeaveClass1" EntityType="dbControlAccesoModel.LeaveClass1" />
+          <EntitySet Name="Machines" EntityType="dbControlAccesoModel.Machines" />
+          <EntitySet Name="NUM_RUN" EntityType="dbControlAccesoModel.NUM_RUN" />
+          <EntitySet Name="NUM_RUN_DEIL" EntityType="dbControlAccesoModel.NUM_RUN_DEIL" />
+          <EntitySet Name="ReportItem" EntityType="dbControlAccesoModel.ReportItem" />
+          <EntitySet Name="SchClass" EntityType="dbControlAccesoModel.SchClass" />
+          <EntitySet Name="SECURITYDETAILS" EntityType="dbControlAccesoModel.SECURITYDETAILS" />
+          <EntitySet Name="ServerLog" EntityType="dbControlAccesoModel.ServerLog" />
+          <EntitySet Name="SHIFT" EntityType="dbControlAccesoModel.SHIFT" />
+          <EntitySet Name="SystemLog" EntityType="dbControlAccesoModel.SystemLog" />
+          <EntitySet Name="TBSMSALLOT" EntityType="dbControlAccesoModel.TBSMSALLOT" />
+          <EntitySet Name="TBSMSINFO" EntityType="dbControlAccesoModel.TBSMSINFO" />
+          <EntitySet Name="TEMPLATE" EntityType="dbControlAccesoModel.TEMPLATE" />
+          <EntitySet Name="USER_OF_RUN" EntityType="dbControlAccesoModel.USER_OF_RUN" />
+          <EntitySet Name="USER_SPEDAY" EntityType="dbControlAccesoModel.USER_SPEDAY" />
+          <EntitySet Name="USER_TEMP_SCH" EntityType="dbControlAccesoModel.USER_TEMP_SCH" />
+          <EntitySet Name="UserACMachines" EntityType="dbControlAccesoModel.UserACMachines" />
+          <EntitySet Name="UserACPrivilege" EntityType="dbControlAccesoModel.UserACPrivilege" />
+          <EntitySet Name="USERINFO" EntityType="dbControlAccesoModel.USERINFO" />
+          <EntitySet Name="UsersMachines" EntityType="dbControlAccesoModel.UsersMachines" />
+          <EntitySet Name="UserUpdates" EntityType="dbControlAccesoModel.UserUpdates" />
+          <EntitySet Name="UserUsedSClasses" EntityType="dbControlAccesoModel.UserUsedSClasses" />
+        </EntityContainer>
+        <EntityType Name="ACGroup">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="Int16" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="TimeZone1" Type="Int16" />
+          <Property Name="TimeZone2" Type="Int16" />
+          <Property Name="TimeZone3" Type="Int16" />
+          <Property Name="holidayvaild" Type="Boolean" />
+          <Property Name="verifystyle" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ACTimeZones">
+          <Key>
+            <PropertyRef Name="TimeZoneID" />
+          </Key>
+          <Property Name="TimeZoneID" Type="Int16" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="SunStart" Type="DateTime" Precision="3" />
+          <Property Name="SunEnd" Type="DateTime" Precision="3" />
+          <Property Name="MonStart" Type="DateTime" Precision="3" />
+          <Property Name="MonEnd" Type="DateTime" Precision="3" />
+          <Property Name="TuesStart" Type="DateTime" Precision="3" />
+          <Property Name="TuesEnd" Type="DateTime" Precision="3" />
+          <Property Name="WedStart" Type="DateTime" Precision="3" />
+          <Property Name="WedEnd" Type="DateTime" Precision="3" />
+          <Property Name="ThursStart" Type="DateTime" Precision="3" />
+          <Property Name="ThursEnd" Type="DateTime" Precision="3" />
+          <Property Name="FriStart" Type="DateTime" Precision="3" />
+          <Property Name="FriEnd" Type="DateTime" Precision="3" />
+          <Property Name="SatStart" Type="DateTime" Precision="3" />
+          <Property Name="SatEnd" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ACUnlockComb">
+          <Key>
+            <PropertyRef Name="UnlockCombID" />
+          </Key>
+          <Property Name="UnlockCombID" Type="Int16" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Group01" Type="Int16" />
+          <Property Name="Group02" Type="Int16" />
+          <Property Name="Group03" Type="Int16" />
+          <Property Name="Group04" Type="Int16" />
+          <Property Name="Group05" Type="Int16" />
+        </EntityType>
+        <EntityType Name="AlarmLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Operator" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EnrollNumber" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="LogTime" Type="DateTime" Precision="3" />
+          <Property Name="MachineAlias" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="AlarmType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="AttParam">
+          <Key>
+            <PropertyRef Name="PARANAME" />
+          </Key>
+          <Property Name="PARANAME" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PARATYPE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="PARAVALUE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="AuditedExc">
+          <Key>
+            <PropertyRef Name="AEID" />
+          </Key>
+          <Property Name="AEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="CheckTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NewExcID" Type="Int32" />
+          <Property Name="IsLeave" Type="Int16" />
+          <Property Name="UName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="AUTHDEVICE">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="MachineID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="MachineID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CHECKEXACT">
+          <Key>
+            <PropertyRef Name="EXACTID" />
+          </Key>
+          <Property Name="EXACTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="CHECKTIME" Type="DateTime" Precision="3" />
+          <Property Name="CHECKTYPE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="ISADD" Type="Int16" />
+          <Property Name="YUYIN" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ISMODIFY" Type="Int16" />
+          <Property Name="ISDELETE" Type="Int16" />
+          <Property Name="INCOUNT" Type="Int16" />
+          <Property Name="ISCOUNT" Type="Int16" />
+          <Property Name="MODIFYBY" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CHECKINOUT">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="CHECKTIME" />
+          </Key>
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="CHECKTIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CHECKTYPE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="VERIFYCODE" Type="Int32" />
+          <Property Name="SENSORID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="Memoinfo" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="WorkCode" Type="Int32" />
+          <Property Name="sn" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserExtFmt" Type="Int16" />
+        </EntityType>
+        <EntityType Name="DEPARTMENTS">
+          <Key>
+            <PropertyRef Name="DEPTID" />
+          </Key>
+          <Property Name="DEPTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DEPTNAME" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="SUPDEPTID" Type="Int32" Nullable="false" />
+          <Property Name="InheritParentSch" Type="Int16" />
+          <Property Name="InheritDeptSch" Type="Int16" />
+          <Property Name="InheritDeptSchClass" Type="Int16" />
+          <Property Name="AutoSchPlan" Type="Int16" />
+          <Property Name="InLate" Type="Int16" />
+          <Property Name="OutEarly" Type="Int16" />
+          <Property Name="InheritDeptRule" Type="Int16" />
+          <Property Name="MinAutoSchInterval" Type="Int32" />
+          <Property Name="RegisterOT" Type="Int16" />
+          <Property Name="DefaultSchId" Type="Int32" Nullable="false" />
+          <Property Name="ATT" Type="Int16" />
+          <Property Name="Holiday" Type="Int16" />
+          <Property Name="OverTime" Type="Int16" />
+        </EntityType>
+        <EntityType Name="DeptUsedSchs">
+          <Key>
+            <PropertyRef Name="DeptId" />
+            <PropertyRef Name="SchId" />
+          </Key>
+          <Property Name="DeptId" Type="Int32" Nullable="false" />
+          <Property Name="SchId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmOpLog">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="OperateTime" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="OperateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="manipulationID" Type="Int32" />
+          <Property Name="Params1" Type="Int32" />
+          <Property Name="Params2" Type="Int32" />
+          <Property Name="Params3" Type="Int32" />
+          <Property Name="Params4" Type="Int32" />
+          <Property Name="SensorId" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="FaceTemp">
+          <Key>
+            <PropertyRef Name="TEMPLATEID" />
+          </Key>
+          <Property Name="TEMPLATEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNO" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="SIZE" Type="Int32" />
+          <Property Name="pin" Type="Int32" />
+          <Property Name="FACEID" Type="Int32" />
+          <Property Name="VALID" Type="Int32" />
+          <Property Name="RESERVE" Type="Int32" />
+          <Property Name="ACTIVETIME" Type="Int32" />
+          <Property Name="VFCOUNT" Type="Int32" />
+          <Property Name="TEMPLATE" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HOLIDAYS">
+          <Key>
+            <PropertyRef Name="HOLIDAYID" />
+          </Key>
+          <Property Name="HOLIDAYID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HOLIDAYNAME" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="HOLIDAYYEAR" Type="Int16" />
+          <Property Name="HOLIDAYMONTH" Type="Int16" />
+          <Property Name="HOLIDAYDAY" Type="Int16" />
+          <Property Name="STARTTIME" Type="DateTime" Precision="3" />
+          <Property Name="DURATION" Type="Int16" />
+          <Property Name="HOLIDAYTYPE" Type="Int16" />
+          <Property Name="XINBIE" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="MINZU" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DeptID" Type="Int16" />
+        </EntityType>
+        <EntityType Name="LeaveClass">
+          <Key>
+            <PropertyRef Name="LeaveId" />
+          </Key>
+          <Property Name="LeaveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeaveName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="MinUnit" Type="Double" Nullable="false" />
+          <Property Name="Unit" Type="Int16" Nullable="false" />
+          <Property Name="RemaindProc" Type="Int16" Nullable="false" />
+          <Property Name="RemaindCount" Type="Int16" Nullable="false" />
+          <Property Name="ReportSymbol" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="Deduct" Type="Double" Nullable="false" />
+          <Property Name="Color" Type="Int32" Nullable="false" />
+          <Property Name="Classify" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LeaveClass1">
+          <Key>
+            <PropertyRef Name="LeaveId" />
+          </Key>
+          <Property Name="LeaveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeaveName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="MinUnit" Type="Double" Nullable="false" />
+          <Property Name="Unit" Type="Int16" Nullable="false" />
+          <Property Name="RemaindProc" Type="Int16" Nullable="false" />
+          <Property Name="RemaindCount" Type="Int16" Nullable="false" />
+          <Property Name="ReportSymbol" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="Deduct" Type="Double" Nullable="false" />
+          <Property Name="LeaveType" Type="Int16" Nullable="false" />
+          <Property Name="Color" Type="Int32" Nullable="false" />
+          <Property Name="Classify" Type="Int16" Nullable="false" />
+          <Property Name="Calc" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Machines">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MachineAlias" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ConnectType" Type="Int32" Nullable="false" />
+          <Property Name="IP" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SerialPort" Type="Int32" />
+          <Property Name="Port" Type="Int32" />
+          <Property Name="Baudrate" Type="Int32" />
+          <Property Name="MachineNumber" Type="Int32" Nullable="false" />
+          <Property Name="IsHost" Type="Boolean" />
+          <Property Name="Enabled" Type="Boolean" />
+          <Property Name="CommPassword" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="UILanguage" Type="Int16" />
+          <Property Name="DateFormat" Type="Int16" />
+          <Property Name="InOutRecordWarn" Type="Int16" />
+          <Property Name="Idle" Type="Int16" />
+          <Property Name="Voice" Type="Int16" />
+          <Property Name="managercount" Type="Int16" />
+          <Property Name="usercount" Type="Int16" />
+          <Property Name="fingercount" Type="Int16" />
+          <Property Name="SecretCount" Type="Int16" />
+          <Property Name="FirmwareVersion" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProductType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="LockControl" Type="Int16" />
+          <Property Name="Purpose" Type="Int16" />
+          <Property Name="ProduceKind" Type="Int32" />
+          <Property Name="sn" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PhotoStamp" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="IsIfChangeConfigServer2" Type="Int32" />
+        </EntityType>
+        <EntityType Name="NUM_RUN">
+          <Key>
+            <PropertyRef Name="NUM_RUNID" />
+          </Key>
+          <Property Name="NUM_RUNID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OLDID" Type="Int32" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="STARTDATE" Type="DateTime" Precision="3" />
+          <Property Name="ENDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CYLE" Type="Int16" />
+          <Property Name="UNITS" Type="Int16" />
+        </EntityType>
+        <EntityType Name="NUM_RUN_DEIL">
+          <Key>
+            <PropertyRef Name="NUM_RUNID" />
+            <PropertyRef Name="STARTTIME" />
+            <PropertyRef Name="SDAYS" />
+          </Key>
+          <Property Name="NUM_RUNID" Type="Int16" Nullable="false" />
+          <Property Name="STARTTIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ENDTIME" Type="DateTime" Precision="3" />
+          <Property Name="SDAYS" Type="Int16" Nullable="false" />
+          <Property Name="EDAYS" Type="Int16" />
+          <Property Name="SCHCLASSID" Type="Int32" />
+          <Property Name="OverTime" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ReportItem">
+          <Key>
+            <PropertyRef Name="RIID" />
+          </Key>
+          <Property Name="RIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RIIndex" Type="Int32" />
+          <Property Name="ShowIt" Type="Int16" />
+          <Property Name="RIName" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="UnitName" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="Formula" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="CalcBySchClass" Type="Int16" />
+          <Property Name="StatisticMethod" Type="Int16" />
+          <Property Name="CalcLast" Type="Int16" />
+          <Property Name="Notes" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SchClass">
+          <Key>
+            <PropertyRef Name="schClassid" />
+          </Key>
+          <Property Name="schClassid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="schName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LateMinutes" Type="Int32" />
+          <Property Name="EarlyMinutes" Type="Int32" />
+          <Property Name="CheckIn" Type="Int32" />
+          <Property Name="CheckOut" Type="Int32" />
+          <Property Name="CheckInTime1" Type="DateTime" Precision="3" />
+          <Property Name="CheckInTime2" Type="DateTime" Precision="3" />
+          <Property Name="CheckOutTime1" Type="DateTime" Precision="3" />
+          <Property Name="CheckOutTime2" Type="DateTime" Precision="3" />
+          <Property Name="Color" Type="Int32" />
+          <Property Name="AutoBind" Type="Int16" />
+          <Property Name="WorkDay" Type="Double" />
+          <Property Name="SensorID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="WorkMins" Type="Double" />
+        </EntityType>
+        <EntityType Name="SECURITYDETAILS">
+          <Key>
+            <PropertyRef Name="SECURITYDETAILID" />
+          </Key>
+          <Property Name="SECURITYDETAILID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="DEPTID" Type="Int16" />
+          <Property Name="SCHEDULE" Type="Int16" />
+          <Property Name="USERINFO" Type="Int16" />
+          <Property Name="ENROLLFINGERS" Type="Int16" />
+          <Property Name="REPORTVIEW" Type="Int16" />
+          <Property Name="REPORT" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ReadOnly" Type="Boolean" />
+          <Property Name="FullControl" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ServerLog">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="EVENT" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="EVENTTIME" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EVENT" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="EnrollNumber" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="parameter" Type="Int16" />
+          <Property Name="EVENTTIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SENSORID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="OPERATOR" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SHIFT">
+          <Key>
+            <PropertyRef Name="SHIFTID" />
+          </Key>
+          <Property Name="SHIFTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="USHIFTID" Type="Int32" />
+          <Property Name="STARTDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ENDDATE" Type="DateTime" Precision="3" />
+          <Property Name="RUNNUM" Type="Int16" />
+          <Property Name="SCH1" Type="Int32" />
+          <Property Name="SCH2" Type="Int32" />
+          <Property Name="SCH3" Type="Int32" />
+          <Property Name="SCH4" Type="Int32" />
+          <Property Name="SCH5" Type="Int32" />
+          <Property Name="SCH6" Type="Int32" />
+          <Property Name="SCH7" Type="Int32" />
+          <Property Name="SCH8" Type="Int32" />
+          <Property Name="SCH9" Type="Int32" />
+          <Property Name="SCH10" Type="Int32" />
+          <Property Name="SCH11" Type="Int32" />
+          <Property Name="SCH12" Type="Int32" />
+          <Property Name="CYCLE" Type="Int16" />
+          <Property Name="UNITS" Type="Int16" />
+        </EntityType>
+        <EntityType Name="SystemLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Operator" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="LogTime" Type="DateTime" Precision="3" />
+          <Property Name="MachineAlias" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="LogTag" Type="Int16" />
+          <Property Name="LogDescr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TBSMSALLOT">
+          <Key>
+            <PropertyRef Name="REFERENCE" />
+          </Key>
+          <Property Name="REFERENCE" Type="Int32" Nullable="false" />
+          <Property Name="SMSREF" Type="Int32" Nullable="false" />
+          <Property Name="USERREF" Type="Int32" Nullable="false" />
+          <Property Name="GENTM" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TBSMSINFO">
+          <Key>
+            <PropertyRef Name="REFERENCE" />
+          </Key>
+          <Property Name="REFERENCE" Type="Int32" Nullable="false" />
+          <Property Name="SMSID" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="SMSINDEX" Type="Int32" Nullable="false" />
+          <Property Name="SMSTYPE" Type="Int32" />
+          <Property Name="SMSCONTENT" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SMSSTARTTM" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="SMSTMLENG" Type="Int32" />
+          <Property Name="GENTM" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TEMPLATE">
+          <Key>
+            <PropertyRef Name="TEMPLATEID" />
+          </Key>
+          <Property Name="TEMPLATEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="FINGERID" Type="Int32" Nullable="false" />
+          <Property Name="TEMPLATE1" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="TEMPLATE2" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="TEMPLATE3" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="BITMAPPICTURE" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="BITMAPPICTURE2" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="BITMAPPICTURE3" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="BITMAPPICTURE4" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="USETYPE" Type="Int16" />
+          <Property Name="EMACHINENUM" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="TEMPLATE11" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Flag" Type="Int16" />
+          <Property Name="DivisionFP" Type="Int16" />
+          <Property Name="TEMPLATE4" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="USER_OF_RUN">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="NUM_OF_RUN_ID" />
+            <PropertyRef Name="STARTDATE" />
+            <PropertyRef Name="ENDDATE" />
+          </Key>
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="NUM_OF_RUN_ID" Type="Int32" Nullable="false" />
+          <Property Name="STARTDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ENDDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ISNOTOF_RUN" Type="Int32" />
+          <Property Name="ORDER_RUN" Type="Int32" />
+        </EntityType>
+        <EntityType Name="USER_SPEDAY">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="STARTSPECDAY" />
+            <PropertyRef Name="DATEID" />
+          </Key>
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="STARTSPECDAY" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ENDSPECDAY" Type="DateTime" Precision="3" />
+          <Property Name="DATEID" Type="Int16" Nullable="false" />
+          <Property Name="YUANYING" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="USER_TEMP_SCH">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="COMETIME" />
+            <PropertyRef Name="LEAVETIME" />
+          </Key>
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="COMETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LEAVETIME" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OVERTIME" Type="Int32" Nullable="false" />
+          <Property Name="TYPE" Type="Int16" />
+          <Property Name="FLAG" Type="Int16" />
+          <Property Name="SCHCLASSID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UserACMachines">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="Deviceid" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Deviceid" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserACPrivilege">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="DeviceID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="DeviceID" Type="Int32" Nullable="false" />
+          <Property Name="ACGroupID" Type="Int32" />
+          <Property Name="IsUseGroup" Type="Boolean" />
+          <Property Name="TimeZone1" Type="Int32" />
+          <Property Name="TimeZone2" Type="Int32" />
+          <Property Name="TimeZone3" Type="Int32" />
+          <Property Name="verifystyle" Type="Int32" />
+        </EntityType>
+        <EntityType Name="USERINFO">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BADGENUMBER" Type="String" Nullable="false" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="SSN" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="NAME" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="GENDER" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="TITLE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PAGER" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BIRTHDAY" Type="DateTime" Precision="3" />
+          <Property Name="HIREDDAY" Type="DateTime" Precision="3" />
+          <Property Name="STREET" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="CITY" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="STATE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="ZIP" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="OPHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FPHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="VERIFICATIONMETHOD" Type="Int16" />
+          <Property Name="DEFAULTDEPTID" Type="Int16" />
+          <Property Name="SECURITYFLAGS" Type="Int16" />
+          <Property Name="ATT" Type="Int16" Nullable="false" />
+          <Property Name="INLATE" Type="Int16" Nullable="false" />
+          <Property Name="OUTEARLY" Type="Int16" Nullable="false" />
+          <Property Name="OVERTIME" Type="Int16" Nullable="false" />
+          <Property Name="SEP" Type="Int16" Nullable="false" />
+          <Property Name="HOLIDAY" Type="Int16" Nullable="false" />
+          <Property Name="MINZU" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="LUNCHDURATION" Type="Int16" Nullable="false" />
+          <Property Name="MVerifyPass" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PHOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Notes" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="privilege" Type="Int32" />
+          <Property Name="InheritDeptSch" Type="Int16" />
+          <Property Name="InheritDeptSchClass" Type="Int16" />
+          <Property Name="AutoSchPlan" Type="Int16" />
+          <Property Name="MinAutoSchInterval" Type="Int32" />
+          <Property Name="RegisterOT" Type="Int16" />
+          <Property Name="InheritDeptRule" Type="Int16" />
+          <Property Name="EMPRIVILEGE" Type="Int16" />
+          <Property Name="CardNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UsersMachines">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="DEVICEID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" Nullable="false" />
+          <Property Name="DEVICEID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserUpdates">
+          <Key>
+            <PropertyRef Name="UpdateId" />
+          </Key>
+          <Property Name="UpdateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BadgeNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UserUsedSClasses">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="SchId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="SchId" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbControlAccesoModelStoreContainer" CdmEntityContainer="dbControlAccesoEntities">
+          <EntitySetMapping Name="ACGroup">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.ACGroup">
+              <MappingFragment StoreEntitySet="ACGroup">
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TimeZone1" ColumnName="TimeZone1" />
+                <ScalarProperty Name="TimeZone2" ColumnName="TimeZone2" />
+                <ScalarProperty Name="TimeZone3" ColumnName="TimeZone3" />
+                <ScalarProperty Name="holidayvaild" ColumnName="holidayvaild" />
+                <ScalarProperty Name="verifystyle" ColumnName="verifystyle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACTimeZones">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.ACTimeZones">
+              <MappingFragment StoreEntitySet="ACTimeZones">
+                <ScalarProperty Name="TimeZoneID" ColumnName="TimeZoneID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SunStart" ColumnName="SunStart" />
+                <ScalarProperty Name="SunEnd" ColumnName="SunEnd" />
+                <ScalarProperty Name="MonStart" ColumnName="MonStart" />
+                <ScalarProperty Name="MonEnd" ColumnName="MonEnd" />
+                <ScalarProperty Name="TuesStart" ColumnName="TuesStart" />
+                <ScalarProperty Name="TuesEnd" ColumnName="TuesEnd" />
+                <ScalarProperty Name="WedStart" ColumnName="WedStart" />
+                <ScalarProperty Name="WedEnd" ColumnName="WedEnd" />
+                <ScalarProperty Name="ThursStart" ColumnName="ThursStart" />
+                <ScalarProperty Name="ThursEnd" ColumnName="ThursEnd" />
+                <ScalarProperty Name="FriStart" ColumnName="FriStart" />
+                <ScalarProperty Name="FriEnd" ColumnName="FriEnd" />
+                <ScalarProperty Name="SatStart" ColumnName="SatStart" />
+                <ScalarProperty Name="SatEnd" ColumnName="SatEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACUnlockComb">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.ACUnlockComb">
+              <MappingFragment StoreEntitySet="ACUnlockComb">
+                <ScalarProperty Name="UnlockCombID" ColumnName="UnlockCombID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Group01" ColumnName="Group01" />
+                <ScalarProperty Name="Group02" ColumnName="Group02" />
+                <ScalarProperty Name="Group03" ColumnName="Group03" />
+                <ScalarProperty Name="Group04" ColumnName="Group04" />
+                <ScalarProperty Name="Group05" ColumnName="Group05" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AlarmLog">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.AlarmLog">
+              <MappingFragment StoreEntitySet="AlarmLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="EnrollNumber" ColumnName="EnrollNumber" />
+                <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+                <ScalarProperty Name="MachineAlias" ColumnName="MachineAlias" />
+                <ScalarProperty Name="AlarmType" ColumnName="AlarmType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AttParam">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.AttParam">
+              <MappingFragment StoreEntitySet="AttParam">
+                <ScalarProperty Name="PARANAME" ColumnName="PARANAME" />
+                <ScalarProperty Name="PARATYPE" ColumnName="PARATYPE" />
+                <ScalarProperty Name="PARAVALUE" ColumnName="PARAVALUE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AuditedExc">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.AuditedExc">
+              <MappingFragment StoreEntitySet="AuditedExc">
+                <ScalarProperty Name="AEID" ColumnName="AEID" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CheckTime" ColumnName="CheckTime" />
+                <ScalarProperty Name="NewExcID" ColumnName="NewExcID" />
+                <ScalarProperty Name="IsLeave" ColumnName="IsLeave" />
+                <ScalarProperty Name="UName" ColumnName="UName" />
+                <ScalarProperty Name="UTime" ColumnName="UTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AUTHDEVICE">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.AUTHDEVICE">
+              <MappingFragment StoreEntitySet="AUTHDEVICE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHECKEXACT">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.CHECKEXACT">
+              <MappingFragment StoreEntitySet="CHECKEXACT">
+                <ScalarProperty Name="EXACTID" ColumnName="EXACTID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="CHECKTIME" ColumnName="CHECKTIME" />
+                <ScalarProperty Name="CHECKTYPE" ColumnName="CHECKTYPE" />
+                <ScalarProperty Name="ISADD" ColumnName="ISADD" />
+                <ScalarProperty Name="YUYIN" ColumnName="YUYIN" />
+                <ScalarProperty Name="ISMODIFY" ColumnName="ISMODIFY" />
+                <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+                <ScalarProperty Name="INCOUNT" ColumnName="INCOUNT" />
+                <ScalarProperty Name="ISCOUNT" ColumnName="ISCOUNT" />
+                <ScalarProperty Name="MODIFYBY" ColumnName="MODIFYBY" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHECKINOUT">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.CHECKINOUT">
+              <MappingFragment StoreEntitySet="CHECKINOUT">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="CHECKTIME" ColumnName="CHECKTIME" />
+                <ScalarProperty Name="CHECKTYPE" ColumnName="CHECKTYPE" />
+                <ScalarProperty Name="VERIFYCODE" ColumnName="VERIFYCODE" />
+                <ScalarProperty Name="SENSORID" ColumnName="SENSORID" />
+                <ScalarProperty Name="Memoinfo" ColumnName="Memoinfo" />
+                <ScalarProperty Name="WorkCode" ColumnName="WorkCode" />
+                <ScalarProperty Name="sn" ColumnName="sn" />
+                <ScalarProperty Name="UserExtFmt" ColumnName="UserExtFmt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DEPARTMENTS">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.DEPARTMENTS">
+              <MappingFragment StoreEntitySet="DEPARTMENTS">
+                <ScalarProperty Name="DEPTID" ColumnName="DEPTID" />
+                <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+                <ScalarProperty Name="SUPDEPTID" ColumnName="SUPDEPTID" />
+                <ScalarProperty Name="InheritParentSch" ColumnName="InheritParentSch" />
+                <ScalarProperty Name="InheritDeptSch" ColumnName="InheritDeptSch" />
+                <ScalarProperty Name="InheritDeptSchClass" ColumnName="InheritDeptSchClass" />
+                <ScalarProperty Name="AutoSchPlan" ColumnName="AutoSchPlan" />
+                <ScalarProperty Name="InLate" ColumnName="InLate" />
+                <ScalarProperty Name="OutEarly" ColumnName="OutEarly" />
+                <ScalarProperty Name="InheritDeptRule" ColumnName="InheritDeptRule" />
+                <ScalarProperty Name="MinAutoSchInterval" ColumnName="MinAutoSchInterval" />
+                <ScalarProperty Name="RegisterOT" ColumnName="RegisterOT" />
+                <ScalarProperty Name="DefaultSchId" ColumnName="DefaultSchId" />
+                <ScalarProperty Name="ATT" ColumnName="ATT" />
+                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+                <ScalarProperty Name="OverTime" ColumnName="OverTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeptUsedSchs">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.DeptUsedSchs">
+              <MappingFragment StoreEntitySet="DeptUsedSchs">
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+                <ScalarProperty Name="SchId" ColumnName="SchId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmOpLog">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.EmOpLog">
+              <MappingFragment StoreEntitySet="EmOpLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="OperateTime" ColumnName="OperateTime" />
+                <ScalarProperty Name="manipulationID" ColumnName="manipulationID" />
+                <ScalarProperty Name="Params1" ColumnName="Params1" />
+                <ScalarProperty Name="Params2" ColumnName="Params2" />
+                <ScalarProperty Name="Params3" ColumnName="Params3" />
+                <ScalarProperty Name="Params4" ColumnName="Params4" />
+                <ScalarProperty Name="SensorId" ColumnName="SensorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FaceTemp">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.FaceTemp">
+              <MappingFragment StoreEntitySet="FaceTemp">
+                <ScalarProperty Name="TEMPLATEID" ColumnName="TEMPLATEID" />
+                <ScalarProperty Name="USERNO" ColumnName="USERNO" />
+                <ScalarProperty Name="SIZE" ColumnName="SIZE" />
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="FACEID" ColumnName="FACEID" />
+                <ScalarProperty Name="VALID" ColumnName="VALID" />
+                <ScalarProperty Name="RESERVE" ColumnName="RESERVE" />
+                <ScalarProperty Name="ACTIVETIME" ColumnName="ACTIVETIME" />
+                <ScalarProperty Name="VFCOUNT" ColumnName="VFCOUNT" />
+                <ScalarProperty Name="TEMPLATE" ColumnName="TEMPLATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOLIDAYS">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.HOLIDAYS">
+              <MappingFragment StoreEntitySet="HOLIDAYS">
+                <ScalarProperty Name="HOLIDAYID" ColumnName="HOLIDAYID" />
+                <ScalarProperty Name="HOLIDAYNAME" ColumnName="HOLIDAYNAME" />
+                <ScalarProperty Name="HOLIDAYYEAR" ColumnName="HOLIDAYYEAR" />
+                <ScalarProperty Name="HOLIDAYMONTH" ColumnName="HOLIDAYMONTH" />
+                <ScalarProperty Name="HOLIDAYDAY" ColumnName="HOLIDAYDAY" />
+                <ScalarProperty Name="STARTTIME" ColumnName="STARTTIME" />
+                <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+                <ScalarProperty Name="HOLIDAYTYPE" ColumnName="HOLIDAYTYPE" />
+                <ScalarProperty Name="XINBIE" ColumnName="XINBIE" />
+                <ScalarProperty Name="MINZU" ColumnName="MINZU" />
+                <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeaveClass">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.LeaveClass">
+              <MappingFragment StoreEntitySet="LeaveClass">
+                <ScalarProperty Name="LeaveId" ColumnName="LeaveId" />
+                <ScalarProperty Name="LeaveName" ColumnName="LeaveName" />
+                <ScalarProperty Name="MinUnit" ColumnName="MinUnit" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="RemaindProc" ColumnName="RemaindProc" />
+                <ScalarProperty Name="RemaindCount" ColumnName="RemaindCount" />
+                <ScalarProperty Name="ReportSymbol" ColumnName="ReportSymbol" />
+                <ScalarProperty Name="Deduct" ColumnName="Deduct" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Classify" ColumnName="Classify" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeaveClass1">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.LeaveClass1">
+              <MappingFragment StoreEntitySet="LeaveClass1">
+                <ScalarProperty Name="LeaveId" ColumnName="LeaveId" />
+                <ScalarProperty Name="LeaveName" ColumnName="LeaveName" />
+                <ScalarProperty Name="MinUnit" ColumnName="MinUnit" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="RemaindProc" ColumnName="RemaindProc" />
+                <ScalarProperty Name="RemaindCount" ColumnName="RemaindCount" />
+                <ScalarProperty Name="ReportSymbol" ColumnName="ReportSymbol" />
+                <ScalarProperty Name="Deduct" ColumnName="Deduct" />
+                <ScalarProperty Name="LeaveType" ColumnName="LeaveType" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Classify" ColumnName="Classify" />
+                <ScalarProperty Name="Calc" ColumnName="Calc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Machines">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.Machines">
+              <MappingFragment StoreEntitySet="Machines">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MachineAlias" ColumnName="MachineAlias" />
+                <ScalarProperty Name="ConnectType" ColumnName="ConnectType" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="SerialPort" ColumnName="SerialPort" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="Baudrate" ColumnName="Baudrate" />
+                <ScalarProperty Name="MachineNumber" ColumnName="MachineNumber" />
+                <ScalarProperty Name="IsHost" ColumnName="IsHost" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="CommPassword" ColumnName="CommPassword" />
+                <ScalarProperty Name="UILanguage" ColumnName="UILanguage" />
+                <ScalarProperty Name="DateFormat" ColumnName="DateFormat" />
+                <ScalarProperty Name="InOutRecordWarn" ColumnName="InOutRecordWarn" />
+                <ScalarProperty Name="Idle" ColumnName="Idle" />
+                <ScalarProperty Name="Voice" ColumnName="Voice" />
+                <ScalarProperty Name="managercount" ColumnName="managercount" />
+                <ScalarProperty Name="usercount" ColumnName="usercount" />
+                <ScalarProperty Name="fingercount" ColumnName="fingercount" />
+                <ScalarProperty Name="SecretCount" ColumnName="SecretCount" />
+                <ScalarProperty Name="FirmwareVersion" ColumnName="FirmwareVersion" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="LockControl" ColumnName="LockControl" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="ProduceKind" ColumnName="ProduceKind" />
+                <ScalarProperty Name="sn" ColumnName="sn" />
+                <ScalarProperty Name="PhotoStamp" ColumnName="PhotoStamp" />
+                <ScalarProperty Name="IsIfChangeConfigServer2" ColumnName="IsIfChangeConfigServer2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NUM_RUN">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.NUM_RUN">
+              <MappingFragment StoreEntitySet="NUM_RUN">
+                <ScalarProperty Name="NUM_RUNID" ColumnName="NUM_RUNID" />
+                <ScalarProperty Name="OLDID" ColumnName="OLDID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+                <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+                <ScalarProperty Name="CYLE" ColumnName="CYLE" />
+                <ScalarProperty Name="UNITS" ColumnName="UNITS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NUM_RUN_DEIL">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.NUM_RUN_DEIL">
+              <MappingFragment StoreEntitySet="NUM_RUN_DEIL">
+                <ScalarProperty Name="NUM_RUNID" ColumnName="NUM_RUNID" />
+                <ScalarProperty Name="STARTTIME" ColumnName="STARTTIME" />
+                <ScalarProperty Name="ENDTIME" ColumnName="ENDTIME" />
+                <ScalarProperty Name="SDAYS" ColumnName="SDAYS" />
+                <ScalarProperty Name="EDAYS" ColumnName="EDAYS" />
+                <ScalarProperty Name="SCHCLASSID" ColumnName="SCHCLASSID" />
+                <ScalarProperty Name="OverTime" ColumnName="OverTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReportItem">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.ReportItem">
+              <MappingFragment StoreEntitySet="ReportItem">
+                <ScalarProperty Name="RIID" ColumnName="RIID" />
+                <ScalarProperty Name="RIIndex" ColumnName="RIIndex" />
+                <ScalarProperty Name="ShowIt" ColumnName="ShowIt" />
+                <ScalarProperty Name="RIName" ColumnName="RIName" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="Formula" ColumnName="Formula" />
+                <ScalarProperty Name="CalcBySchClass" ColumnName="CalcBySchClass" />
+                <ScalarProperty Name="StatisticMethod" ColumnName="StatisticMethod" />
+                <ScalarProperty Name="CalcLast" ColumnName="CalcLast" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SchClass">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.SchClass">
+              <MappingFragment StoreEntitySet="SchClass">
+                <ScalarProperty Name="schClassid" ColumnName="schClassid" />
+                <ScalarProperty Name="schName" ColumnName="schName" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="LateMinutes" ColumnName="LateMinutes" />
+                <ScalarProperty Name="EarlyMinutes" ColumnName="EarlyMinutes" />
+                <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+                <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+                <ScalarProperty Name="CheckInTime1" ColumnName="CheckInTime1" />
+                <ScalarProperty Name="CheckInTime2" ColumnName="CheckInTime2" />
+                <ScalarProperty Name="CheckOutTime1" ColumnName="CheckOutTime1" />
+                <ScalarProperty Name="CheckOutTime2" ColumnName="CheckOutTime2" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="AutoBind" ColumnName="AutoBind" />
+                <ScalarProperty Name="WorkDay" ColumnName="WorkDay" />
+                <ScalarProperty Name="SensorID" ColumnName="SensorID" />
+                <ScalarProperty Name="WorkMins" ColumnName="WorkMins" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SECURITYDETAILS">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.SECURITYDETAILS">
+              <MappingFragment StoreEntitySet="SECURITYDETAILS">
+                <ScalarProperty Name="SECURITYDETAILID" ColumnName="SECURITYDETAILID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="DEPTID" ColumnName="DEPTID" />
+                <ScalarProperty Name="SCHEDULE" ColumnName="SCHEDULE" />
+                <ScalarProperty Name="USERINFO" ColumnName="USERINFO" />
+                <ScalarProperty Name="ENROLLFINGERS" ColumnName="ENROLLFINGERS" />
+                <ScalarProperty Name="REPORTVIEW" ColumnName="REPORTVIEW" />
+                <ScalarProperty Name="REPORT" ColumnName="REPORT" />
+                <ScalarProperty Name="ReadOnly" ColumnName="ReadOnly" />
+                <ScalarProperty Name="FullControl" ColumnName="FullControl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerLog">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.ServerLog">
+              <MappingFragment StoreEntitySet="ServerLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EVENT" ColumnName="EVENT" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="EnrollNumber" ColumnName="EnrollNumber" />
+                <ScalarProperty Name="parameter" ColumnName="parameter" />
+                <ScalarProperty Name="EVENTTIME" ColumnName="EVENTTIME" />
+                <ScalarProperty Name="SENSORID" ColumnName="SENSORID" />
+                <ScalarProperty Name="OPERATOR" ColumnName="OPERATOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SHIFT">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.SHIFT">
+              <MappingFragment StoreEntitySet="SHIFT">
+                <ScalarProperty Name="SHIFTID" ColumnName="SHIFTID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="USHIFTID" ColumnName="USHIFTID" />
+                <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+                <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+                <ScalarProperty Name="RUNNUM" ColumnName="RUNNUM" />
+                <ScalarProperty Name="SCH1" ColumnName="SCH1" />
+                <ScalarProperty Name="SCH2" ColumnName="SCH2" />
+                <ScalarProperty Name="SCH3" ColumnName="SCH3" />
+                <ScalarProperty Name="SCH4" ColumnName="SCH4" />
+                <ScalarProperty Name="SCH5" ColumnName="SCH5" />
+                <ScalarProperty Name="SCH6" ColumnName="SCH6" />
+                <ScalarProperty Name="SCH7" ColumnName="SCH7" />
+                <ScalarProperty Name="SCH8" ColumnName="SCH8" />
+                <ScalarProperty Name="SCH9" ColumnName="SCH9" />
+                <ScalarProperty Name="SCH10" ColumnName="SCH10" />
+                <ScalarProperty Name="SCH11" ColumnName="SCH11" />
+                <ScalarProperty Name="SCH12" ColumnName="SCH12" />
+                <ScalarProperty Name="CYCLE" ColumnName="CYCLE" />
+                <ScalarProperty Name="UNITS" ColumnName="UNITS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemLog">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.SystemLog">
+              <MappingFragment StoreEntitySet="SystemLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+                <ScalarProperty Name="MachineAlias" ColumnName="MachineAlias" />
+                <ScalarProperty Name="LogTag" ColumnName="LogTag" />
+                <ScalarProperty Name="LogDescr" ColumnName="LogDescr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBSMSALLOT">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.TBSMSALLOT">
+              <MappingFragment StoreEntitySet="TBSMSALLOT">
+                <ScalarProperty Name="REFERENCE" ColumnName="REFERENCE" />
+                <ScalarProperty Name="SMSREF" ColumnName="SMSREF" />
+                <ScalarProperty Name="USERREF" ColumnName="USERREF" />
+                <ScalarProperty Name="GENTM" ColumnName="GENTM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBSMSINFO">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.TBSMSINFO">
+              <MappingFragment StoreEntitySet="TBSMSINFO">
+                <ScalarProperty Name="REFERENCE" ColumnName="REFERENCE" />
+                <ScalarProperty Name="SMSID" ColumnName="SMSID" />
+                <ScalarProperty Name="SMSINDEX" ColumnName="SMSINDEX" />
+                <ScalarProperty Name="SMSTYPE" ColumnName="SMSTYPE" />
+                <ScalarProperty Name="SMSCONTENT" ColumnName="SMSCONTENT" />
+                <ScalarProperty Name="SMSSTARTTM" ColumnName="SMSSTARTTM" />
+                <ScalarProperty Name="SMSTMLENG" ColumnName="SMSTMLENG" />
+                <ScalarProperty Name="GENTM" ColumnName="GENTM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEMPLATE">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.TEMPLATE">
+              <MappingFragment StoreEntitySet="TEMPLATE">
+                <ScalarProperty Name="TEMPLATEID" ColumnName="TEMPLATEID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="FINGERID" ColumnName="FINGERID" />
+                <ScalarProperty Name="TEMPLATE1" ColumnName="TEMPLATE" />
+                <ScalarProperty Name="TEMPLATE2" ColumnName="TEMPLATE2" />
+                <ScalarProperty Name="TEMPLATE3" ColumnName="TEMPLATE3" />
+                <ScalarProperty Name="BITMAPPICTURE" ColumnName="BITMAPPICTURE" />
+                <ScalarProperty Name="BITMAPPICTURE2" ColumnName="BITMAPPICTURE2" />
+                <ScalarProperty Name="BITMAPPICTURE3" ColumnName="BITMAPPICTURE3" />
+                <ScalarProperty Name="BITMAPPICTURE4" ColumnName="BITMAPPICTURE4" />
+                <ScalarProperty Name="USETYPE" ColumnName="USETYPE" />
+                <ScalarProperty Name="EMACHINENUM" ColumnName="EMACHINENUM" />
+                <ScalarProperty Name="TEMPLATE11" ColumnName="TEMPLATE1" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="DivisionFP" ColumnName="DivisionFP" />
+                <ScalarProperty Name="TEMPLATE4" ColumnName="TEMPLATE4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER_OF_RUN">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.USER_OF_RUN">
+              <MappingFragment StoreEntitySet="USER_OF_RUN">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="NUM_OF_RUN_ID" ColumnName="NUM_OF_RUN_ID" />
+                <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+                <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+                <ScalarProperty Name="ISNOTOF_RUN" ColumnName="ISNOTOF_RUN" />
+                <ScalarProperty Name="ORDER_RUN" ColumnName="ORDER_RUN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER_SPEDAY">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.USER_SPEDAY">
+              <MappingFragment StoreEntitySet="USER_SPEDAY">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="STARTSPECDAY" ColumnName="STARTSPECDAY" />
+                <ScalarProperty Name="ENDSPECDAY" ColumnName="ENDSPECDAY" />
+                <ScalarProperty Name="DATEID" ColumnName="DATEID" />
+                <ScalarProperty Name="YUANYING" ColumnName="YUANYING" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER_TEMP_SCH">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.USER_TEMP_SCH">
+              <MappingFragment StoreEntitySet="USER_TEMP_SCH">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="COMETIME" ColumnName="COMETIME" />
+                <ScalarProperty Name="LEAVETIME" ColumnName="LEAVETIME" />
+                <ScalarProperty Name="OVERTIME" ColumnName="OVERTIME" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+                <ScalarProperty Name="SCHCLASSID" ColumnName="SCHCLASSID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserACMachines">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.UserACMachines">
+              <MappingFragment StoreEntitySet="UserACMachines">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Deviceid" ColumnName="Deviceid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserACPrivilege">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.UserACPrivilege">
+              <MappingFragment StoreEntitySet="UserACPrivilege">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+                <ScalarProperty Name="ACGroupID" ColumnName="ACGroupID" />
+                <ScalarProperty Name="IsUseGroup" ColumnName="IsUseGroup" />
+                <ScalarProperty Name="TimeZone1" ColumnName="TimeZone1" />
+                <ScalarProperty Name="TimeZone2" ColumnName="TimeZone2" />
+                <ScalarProperty Name="TimeZone3" ColumnName="TimeZone3" />
+                <ScalarProperty Name="verifystyle" ColumnName="verifystyle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERINFO">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.USERINFO">
+              <MappingFragment StoreEntitySet="USERINFO">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="BADGENUMBER" ColumnName="BADGENUMBER" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="PAGER" ColumnName="PAGER" />
+                <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+                <ScalarProperty Name="HIREDDAY" ColumnName="HIREDDAY" />
+                <ScalarProperty Name="STREET" ColumnName="STREET" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="OPHONE" ColumnName="OPHONE" />
+                <ScalarProperty Name="FPHONE" ColumnName="FPHONE" />
+                <ScalarProperty Name="VERIFICATIONMETHOD" ColumnName="VERIFICATIONMETHOD" />
+                <ScalarProperty Name="DEFAULTDEPTID" ColumnName="DEFAULTDEPTID" />
+                <ScalarProperty Name="SECURITYFLAGS" ColumnName="SECURITYFLAGS" />
+                <ScalarProperty Name="ATT" ColumnName="ATT" />
+                <ScalarProperty Name="INLATE" ColumnName="INLATE" />
+                <ScalarProperty Name="OUTEARLY" ColumnName="OUTEARLY" />
+                <ScalarProperty Name="OVERTIME" ColumnName="OVERTIME" />
+                <ScalarProperty Name="SEP" ColumnName="SEP" />
+                <ScalarProperty Name="HOLIDAY" ColumnName="HOLIDAY" />
+                <ScalarProperty Name="MINZU" ColumnName="MINZU" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="LUNCHDURATION" ColumnName="LUNCHDURATION" />
+                <ScalarProperty Name="MVerifyPass" ColumnName="MVerifyPass" />
+                <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="privilege" ColumnName="privilege" />
+                <ScalarProperty Name="InheritDeptSch" ColumnName="InheritDeptSch" />
+                <ScalarProperty Name="InheritDeptSchClass" ColumnName="InheritDeptSchClass" />
+                <ScalarProperty Name="AutoSchPlan" ColumnName="AutoSchPlan" />
+                <ScalarProperty Name="MinAutoSchInterval" ColumnName="MinAutoSchInterval" />
+                <ScalarProperty Name="RegisterOT" ColumnName="RegisterOT" />
+                <ScalarProperty Name="InheritDeptRule" ColumnName="InheritDeptRule" />
+                <ScalarProperty Name="EMPRIVILEGE" ColumnName="EMPRIVILEGE" />
+                <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersMachines">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.UsersMachines">
+              <MappingFragment StoreEntitySet="UsersMachines">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="DEVICEID" ColumnName="DEVICEID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserUpdates">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.UserUpdates">
+              <MappingFragment StoreEntitySet="UserUpdates">
+                <ScalarProperty Name="UpdateId" ColumnName="UpdateId" />
+                <ScalarProperty Name="BadgeNumber" ColumnName="BadgeNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserUsedSClasses">
+            <EntityTypeMapping TypeName="dbControlAccesoModel.UserUsedSClasses">
+              <MappingFragment StoreEntitySet="UserUsedSClasses">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="SchId" ColumnName="SchId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

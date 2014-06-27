@@ -1,0 +1,17 @@
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\bin\Debug\GoldemGym.Acceso.exe.config
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\bin\Debug\GoldemGym.Acceso.exe
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\bin\Debug\GoldemGym.Acceso.pdb
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\MainWindow.baml
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\MainWindow.g.cs
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\App.g.cs
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\GoldemGym.Acceso_MarkupCompile.cache
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\GoldemGym.Acceso.g.resources
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\GoldemGym.Acceso.Properties.Resources.resources
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\GoldemGym.Acceso.csproj.GenerateResource.Cache
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\GoldemGym.Acceso.exe
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\GoldemGym.Acceso.pdb
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\Interop.zkemkeeper.dll
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\GoldemGym.Acceso.csproj.ResolveComReference.cache
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\bin\Debug\EntityFramework.dll
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\bin\Debug\EntityFramework.xml
+C:\Control de Accesos y Asistencia\GoldemGym.Acceso\GoldemGym.Acceso\obj\Debug\GoldemGym.Acceso.csprojResolveAssemblyReference.cache

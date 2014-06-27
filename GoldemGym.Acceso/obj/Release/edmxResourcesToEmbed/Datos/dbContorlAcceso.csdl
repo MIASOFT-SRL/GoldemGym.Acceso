@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbControlAccesoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="dbControlAccesoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACGroup" EntityType="dbControlAccesoModel.ACGroup" />
+    <EntitySet Name="ACTimeZones" EntityType="dbControlAccesoModel.ACTimeZones" />
+    <EntitySet Name="ACUnlockComb" EntityType="dbControlAccesoModel.ACUnlockComb" />
+    <EntitySet Name="AlarmLog" EntityType="dbControlAccesoModel.AlarmLog" />
+    <EntitySet Name="AttParam" EntityType="dbControlAccesoModel.AttParam" />
+    <EntitySet Name="AuditedExc" EntityType="dbControlAccesoModel.AuditedExc" />
+    <EntitySet Name="AUTHDEVICE" EntityType="dbControlAccesoModel.AUTHDEVICE" />
+    <EntitySet Name="CHECKEXACT" EntityType="dbControlAccesoModel.CHECKEXACT" />
+    <EntitySet Name="CHECKINOUT" EntityType="dbControlAccesoModel.CHECKINOUT" />
+    <EntitySet Name="DEPARTMENTS" EntityType="dbControlAccesoModel.DEPARTMENTS" />
+    <EntitySet Name="DeptUsedSchs" EntityType="dbControlAccesoModel.DeptUsedSchs" />
+    <EntitySet Name="EmOpLog" EntityType="dbControlAccesoModel.EmOpLog" />
+    <EntitySet Name="FaceTemp" EntityType="dbControlAccesoModel.FaceTemp" />
+    <EntitySet Name="HOLIDAYS" EntityType="dbControlAccesoModel.HOLIDAYS" />
+    <EntitySet Name="LeaveClass" EntityType="dbControlAccesoModel.LeaveClass" />
+    <EntitySet Name="LeaveClass1" EntityType="dbControlAccesoModel.LeaveClass1" />
+    <EntitySet Name="Machines" EntityType="dbControlAccesoModel.Machines" />
+    <EntitySet Name="NUM_RUN" EntityType="dbControlAccesoModel.NUM_RUN" />
+    <EntitySet Name="NUM_RUN_DEIL" EntityType="dbControlAccesoModel.NUM_RUN_DEIL" />
+    <EntitySet Name="ReportItem" EntityType="dbControlAccesoModel.ReportItem" />
+    <EntitySet Name="SchClass" EntityType="dbControlAccesoModel.SchClass" />
+    <EntitySet Name="SECURITYDETAILS" EntityType="dbControlAccesoModel.SECURITYDETAILS" />
+    <EntitySet Name="ServerLog" EntityType="dbControlAccesoModel.ServerLog" />
+    <EntitySet Name="SHIFT" EntityType="dbControlAccesoModel.SHIFT" />
+    <EntitySet Name="SystemLog" EntityType="dbControlAccesoModel.SystemLog" />
+    <EntitySet Name="TBSMSALLOT" EntityType="dbControlAccesoModel.TBSMSALLOT" />
+    <EntitySet Name="TBSMSINFO" EntityType="dbControlAccesoModel.TBSMSINFO" />
+    <EntitySet Name="TEMPLATE" EntityType="dbControlAccesoModel.TEMPLATE" />
+    <EntitySet Name="USER_OF_RUN" EntityType="dbControlAccesoModel.USER_OF_RUN" />
+    <EntitySet Name="USER_SPEDAY" EntityType="dbControlAccesoModel.USER_SPEDAY" />
+    <EntitySet Name="USER_TEMP_SCH" EntityType="dbControlAccesoModel.USER_TEMP_SCH" />
+    <EntitySet Name="UserACMachines" EntityType="dbControlAccesoModel.UserACMachines" />
+    <EntitySet Name="UserACPrivilege" EntityType="dbControlAccesoModel.UserACPrivilege" />
+    <EntitySet Name="USERINFO" EntityType="dbControlAccesoModel.USERINFO" />
+    <EntitySet Name="UsersMachines" EntityType="dbControlAccesoModel.UsersMachines" />
+    <EntitySet Name="UserUpdates" EntityType="dbControlAccesoModel.UserUpdates" />
+    <EntitySet Name="UserUsedSClasses" EntityType="dbControlAccesoModel.UserUsedSClasses" />
+  </EntityContainer>
+  <EntityType Name="ACGroup">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="Int16" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="TimeZone1" Type="Int16" />
+    <Property Name="TimeZone2" Type="Int16" />
+    <Property Name="TimeZone3" Type="Int16" />
+    <Property Name="holidayvaild" Type="Boolean" />
+    <Property Name="verifystyle" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ACTimeZones">
+    <Key>
+      <PropertyRef Name="TimeZoneID" />
+    </Key>
+    <Property Name="TimeZoneID" Type="Int16" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="SunStart" Type="DateTime" Precision="3" />
+    <Property Name="SunEnd" Type="DateTime" Precision="3" />
+    <Property Name="MonStart" Type="DateTime" Precision="3" />
+    <Property Name="MonEnd" Type="DateTime" Precision="3" />
+    <Property Name="TuesStart" Type="DateTime" Precision="3" />
+    <Property Name="TuesEnd" Type="DateTime" Precision="3" />
+    <Property Name="WedStart" Type="DateTime" Precision="3" />
+    <Property Name="WedEnd" Type="DateTime" Precision="3" />
+    <Property Name="ThursStart" Type="DateTime" Precision="3" />
+    <Property Name="ThursEnd" Type="DateTime" Precision="3" />
+    <Property Name="FriStart" Type="DateTime" Precision="3" />
+    <Property Name="FriEnd" Type="DateTime" Precision="3" />
+    <Property Name="SatStart" Type="DateTime" Precision="3" />
+    <Property Name="SatEnd" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ACUnlockComb">
+    <Key>
+      <PropertyRef Name="UnlockCombID" />
+    </Key>
+    <Property Name="UnlockCombID" Type="Int16" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Group01" Type="Int16" />
+    <Property Name="Group02" Type="Int16" />
+    <Property Name="Group03" Type="Int16" />
+    <Property Name="Group04" Type="Int16" />
+    <Property Name="Group05" Type="Int16" />
+  </EntityType>
+  <EntityType Name="AlarmLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Operator" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="EnrollNumber" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="LogTime" Type="DateTime" Precision="3" />
+    <Property Name="MachineAlias" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AlarmType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="AttParam">
+    <Key>
+      <PropertyRef Name="PARANAME" />
+    </Key>
+    <Property Name="PARANAME" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="PARATYPE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="PARAVALUE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="AuditedExc">
+    <Key>
+      <PropertyRef Name="AEID" />
+    </Key>
+    <Property Name="AEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="CheckTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NewExcID" Type="Int32" />
+    <Property Name="IsLeave" Type="Int16" />
+    <Property Name="UName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="UTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="AUTHDEVICE">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="MachineID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="MachineID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CHECKEXACT">
+    <Key>
+      <PropertyRef Name="EXACTID" />
+    </Key>
+    <Property Name="EXACTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="CHECKTIME" Type="DateTime" Precision="3" />
+    <Property Name="CHECKTYPE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="ISADD" Type="Int16" />
+    <Property Name="YUYIN" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="ISMODIFY" Type="Int16" />
+    <Property Name="ISDELETE" Type="Int16" />
+    <Property Name="INCOUNT" Type="Int16" />
+    <Property Name="ISCOUNT" Type="Int16" />
+    <Property Name="MODIFYBY" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CHECKINOUT">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="CHECKTIME" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="CHECKTIME" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CHECKTYPE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="VERIFYCODE" Type="Int32" />
+    <Property Name="SENSORID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="Memoinfo" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="WorkCode" Type="Int32" />
+    <Property Name="sn" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="UserExtFmt" Type="Int16" />
+  </EntityType>
+  <EntityType Name="DEPARTMENTS">
+    <Key>
+      <PropertyRef Name="DEPTID" />
+    </Key>
+    <Property Name="DEPTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DEPTNAME" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="SUPDEPTID" Type="Int32" Nullable="false" />
+    <Property Name="InheritParentSch" Type="Int16" />
+    <Property Name="InheritDeptSch" Type="Int16" />
+    <Property Name="InheritDeptSchClass" Type="Int16" />
+    <Property Name="AutoSchPlan" Type="Int16" />
+    <Property Name="InLate" Type="Int16" />
+    <Property Name="OutEarly" Type="Int16" />
+    <Property Name="InheritDeptRule" Type="Int16" />
+    <Property Name="MinAutoSchInterval" Type="Int32" />
+    <Property Name="RegisterOT" Type="Int16" />
+    <Property Name="DefaultSchId" Type="Int32" Nullable="false" />
+    <Property Name="ATT" Type="Int16" />
+    <Property Name="Holiday" Type="Int16" />
+    <Property Name="OverTime" Type="Int16" />
+  </EntityType>
+  <EntityType Name="DeptUsedSchs">
+    <Key>
+      <PropertyRef Name="DeptId" />
+      <PropertyRef Name="SchId" />
+    </Key>
+    <Property Name="DeptId" Type="Int32" Nullable="false" />
+    <Property Name="SchId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmOpLog">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="OperateTime" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="OperateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="manipulationID" Type="Int32" />
+    <Property Name="Params1" Type="Int32" />
+    <Property Name="Params2" Type="Int32" />
+    <Property Name="Params3" Type="Int32" />
+    <Property Name="Params4" Type="Int32" />
+    <Property Name="SensorId" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="FaceTemp">
+    <Key>
+      <PropertyRef Name="TEMPLATEID" />
+    </Key>
+    <Property Name="TEMPLATEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNO" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="SIZE" Type="Int32" />
+    <Property Name="pin" Type="Int32" />
+    <Property Name="FACEID" Type="Int32" />
+    <Property Name="VALID" Type="Int32" />
+    <Property Name="RESERVE" Type="Int32" />
+    <Property Name="ACTIVETIME" Type="Int32" />
+    <Property Name="VFCOUNT" Type="Int32" />
+    <Property Name="TEMPLATE" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="HOLIDAYS">
+    <Key>
+      <PropertyRef Name="HOLIDAYID" />
+    </Key>
+    <Property Name="HOLIDAYID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HOLIDAYNAME" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="HOLIDAYYEAR" Type="Int16" />
+    <Property Name="HOLIDAYMONTH" Type="Int16" />
+    <Property Name="HOLIDAYDAY" Type="Int16" />
+    <Property Name="STARTTIME" Type="DateTime" Precision="3" />
+    <Property Name="DURATION" Type="Int16" />
+    <Property Name="HOLIDAYTYPE" Type="Int16" />
+    <Property Name="XINBIE" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="MINZU" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DeptID" Type="Int16" />
+  </EntityType>
+  <EntityType Name="LeaveClass">
+    <Key>
+      <PropertyRef Name="LeaveId" />
+    </Key>
+    <Property Name="LeaveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LeaveName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MinUnit" Type="Double" Nullable="false" />
+    <Property Name="Unit" Type="Int16" Nullable="false" />
+    <Property Name="RemaindProc" Type="Int16" Nullable="false" />
+    <Property Name="RemaindCount" Type="Int16" Nullable="false" />
+    <Property Name="ReportSymbol" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Deduct" Type="Double" Nullable="false" />
+    <Property Name="Color" Type="Int32" Nullable="false" />
+    <Property Name="Classify" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeaveClass1">
+    <Key>
+      <PropertyRef Name="LeaveId" />
+    </Key>
+    <Property Name="LeaveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LeaveName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="MinUnit" Type="Double" Nullable="false" />
+    <Property Name="Unit" Type="Int16" Nullable="false" />
+    <Property Name="RemaindProc" Type="Int16" Nullable="false" />
+    <Property Name="RemaindCount" Type="Int16" Nullable="false" />
+    <Property Name="ReportSymbol" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="Deduct" Type="Double" Nullable="false" />
+    <Property Name="LeaveType" Type="Int16" Nullable="false" />
+    <Property Name="Color" Type="Int32" Nullable="false" />
+    <Property Name="Classify" Type="Int16" Nullable="false" />
+    <Property Name="Calc" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Machines">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MachineAlias" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ConnectType" Type="Int32" Nullable="false" />
+    <Property Name="IP" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="SerialPort" Type="Int32" />
+    <Property Name="Port" Type="Int32" />
+    <Property Name="Baudrate" Type="Int32" />
+    <Property Name="MachineNumber" Type="Int32" Nullable="false" />
+    <Property Name="IsHost" Type="Boolean" />
+    <Property Name="Enabled" Type="Boolean" />
+    <Property Name="CommPassword" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="UILanguage" Type="Int16" />
+    <Property Name="DateFormat" Type="Int16" />
+    <Property Name="InOutRecordWarn" Type="Int16" />
+    <Property Name="Idle" Type="Int16" />
+    <Property Name="Voice" Type="Int16" />
+    <Property Name="managercount" Type="Int16" />
+    <Property Name="usercount" Type="Int16" />
+    <Property Name="fingercount" Type="Int16" />
+    <Property Name="SecretCount" Type="Int16" />
+    <Property Name="FirmwareVersion" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ProductType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LockControl" Type="Int16" />
+    <Property Name="Purpose" Type="Int16" />
+    <Property Name="ProduceKind" Type="Int32" />
+    <Property Name="sn" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="PhotoStamp" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="IsIfChangeConfigServer2" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NUM_RUN">
+    <Key>
+      <PropertyRef Name="NUM_RUNID" />
+    </Key>
+    <Property Name="NUM_RUNID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OLDID" Type="Int32" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="STARTDATE" Type="DateTime" Precision="3" />
+    <Property Name="ENDDATE" Type="DateTime" Precision="3" />
+    <Property Name="CYLE" Type="Int16" />
+    <Property Name="UNITS" Type="Int16" />
+  </EntityType>
+  <EntityType Name="NUM_RUN_DEIL">
+    <Key>
+      <PropertyRef Name="NUM_RUNID" />
+      <PropertyRef Name="STARTTIME" />
+      <PropertyRef Name="SDAYS" />
+    </Key>
+    <Property Name="NUM_RUNID" Type="Int16" Nullable="false" />
+    <Property Name="STARTTIME" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ENDTIME" Type="DateTime" Precision="3" />
+    <Property Name="SDAYS" Type="Int16" Nullable="false" />
+    <Property Name="EDAYS" Type="Int16" />
+    <Property Name="SCHCLASSID" Type="Int32" />
+    <Property Name="OverTime" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ReportItem">
+    <Key>
+      <PropertyRef Name="RIID" />
+    </Key>
+    <Property Name="RIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RIIndex" Type="Int32" />
+    <Property Name="ShowIt" Type="Int16" />
+    <Property Name="RIName" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="UnitName" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="Formula" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="CalcBySchClass" Type="Int16" />
+    <Property Name="StatisticMethod" Type="Int16" />
+    <Property Name="CalcLast" Type="Int16" />
+    <Property Name="Notes" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SchClass">
+    <Key>
+      <PropertyRef Name="schClassid" />
+    </Key>
+    <Property Name="schClassid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="schName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LateMinutes" Type="Int32" />
+    <Property Name="EarlyMinutes" Type="Int32" />
+    <Property Name="CheckIn" Type="Int32" />
+    <Property Name="CheckOut" Type="Int32" />
+    <Property Name="CheckInTime1" Type="DateTime" Precision="3" />
+    <Property Name="CheckInTime2" Type="DateTime" Precision="3" />
+    <Property Name="CheckOutTime1" Type="DateTime" Precision="3" />
+    <Property Name="CheckOutTime2" Type="DateTime" Precision="3" />
+    <Property Name="Color" Type="Int32" />
+    <Property Name="AutoBind" Type="Int16" />
+    <Property Name="WorkDay" Type="Double" />
+    <Property Name="SensorID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="WorkMins" Type="Double" />
+  </EntityType>
+  <EntityType Name="SECURITYDETAILS">
+    <Key>
+      <PropertyRef Name="SECURITYDETAILID" />
+    </Key>
+    <Property Name="SECURITYDETAILID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="DEPTID" Type="Int16" />
+    <Property Name="SCHEDULE" Type="Int16" />
+    <Property Name="USERINFO" Type="Int16" />
+    <Property Name="ENROLLFINGERS" Type="Int16" />
+    <Property Name="REPORTVIEW" Type="Int16" />
+    <Property Name="REPORT" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ReadOnly" Type="Boolean" />
+    <Property Name="FullControl" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ServerLog">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="EVENT" />
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="EVENTTIME" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENT" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="EnrollNumber" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="parameter" Type="Int16" />
+    <Property Name="EVENTTIME" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SENSORID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="OPERATOR" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SHIFT">
+    <Key>
+      <PropertyRef Name="SHIFTID" />
+    </Key>
+    <Property Name="SHIFTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="USHIFTID" Type="Int32" />
+    <Property Name="STARTDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ENDDATE" Type="DateTime" Precision="3" />
+    <Property Name="RUNNUM" Type="Int16" />
+    <Property Name="SCH1" Type="Int32" />
+    <Property Name="SCH2" Type="Int32" />
+    <Property Name="SCH3" Type="Int32" />
+    <Property Name="SCH4" Type="Int32" />
+    <Property Name="SCH5" Type="Int32" />
+    <Property Name="SCH6" Type="Int32" />
+    <Property Name="SCH7" Type="Int32" />
+    <Property Name="SCH8" Type="Int32" />
+    <Property Name="SCH9" Type="Int32" />
+    <Property Name="SCH10" Type="Int32" />
+    <Property Name="SCH11" Type="Int32" />
+    <Property Name="SCH12" Type="Int32" />
+    <Property Name="CYCLE" Type="Int16" />
+    <Property Name="UNITS" Type="Int16" />
+  </EntityType>
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Operator" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LogTime" Type="DateTime" Precision="3" />
+    <Property Name="MachineAlias" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LogTag" Type="Int16" />
+    <Property Name="LogDescr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TBSMSALLOT">
+    <Key>
+      <PropertyRef Name="REFERENCE" />
+    </Key>
+    <Property Name="REFERENCE" Type="Int32" Nullable="false" />
+    <Property Name="SMSREF" Type="Int32" Nullable="false" />
+    <Property Name="USERREF" Type="Int32" Nullable="false" />
+    <Property Name="GENTM" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TBSMSINFO">
+    <Key>
+      <PropertyRef Name="REFERENCE" />
+    </Key>
+    <Property Name="REFERENCE" Type="Int32" Nullable="false" />
+    <Property Name="SMSID" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="SMSINDEX" Type="Int32" Nullable="false" />
+    <Property Name="SMSTYPE" Type="Int32" />
+    <Property Name="SMSCONTENT" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="SMSSTARTTM" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="SMSTMLENG" Type="Int32" />
+    <Property Name="GENTM" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TEMPLATE">
+    <Key>
+      <PropertyRef Name="TEMPLATEID" />
+    </Key>
+    <Property Name="TEMPLATEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="FINGERID" Type="Int32" Nullable="false" />
+    <Property Name="TEMPLATE1" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="TEMPLATE2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TEMPLATE3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="BITMAPPICTURE" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="BITMAPPICTURE2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="BITMAPPICTURE3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="BITMAPPICTURE4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="USETYPE" Type="Int16" />
+    <Property Name="EMACHINENUM" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TEMPLATE11" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Flag" Type="Int16" />
+    <Property Name="DivisionFP" Type="Int16" />
+    <Property Name="TEMPLATE4" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="USER_OF_RUN">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="NUM_OF_RUN_ID" />
+      <PropertyRef Name="STARTDATE" />
+      <PropertyRef Name="ENDDATE" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="NUM_OF_RUN_ID" Type="Int32" Nullable="false" />
+    <Property Name="STARTDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ENDDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ISNOTOF_RUN" Type="Int32" />
+    <Property Name="ORDER_RUN" Type="Int32" />
+  </EntityType>
+  <EntityType Name="USER_SPEDAY">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="STARTSPECDAY" />
+      <PropertyRef Name="DATEID" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="STARTSPECDAY" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ENDSPECDAY" Type="DateTime" Precision="3" />
+    <Property Name="DATEID" Type="Int16" Nullable="false" />
+    <Property Name="YUANYING" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="USER_TEMP_SCH">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="COMETIME" />
+      <PropertyRef Name="LEAVETIME" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="COMETIME" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LEAVETIME" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OVERTIME" Type="Int32" Nullable="false" />
+    <Property Name="TYPE" Type="Int16" />
+    <Property Name="FLAG" Type="Int16" />
+    <Property Name="SCHCLASSID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UserACMachines">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="Deviceid" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Deviceid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserACPrivilege">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="DeviceID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="DeviceID" Type="Int32" Nullable="false" />
+    <Property Name="ACGroupID" Type="Int32" />
+    <Property Name="IsUseGroup" Type="Boolean" />
+    <Property Name="TimeZone1" Type="Int32" />
+    <Property Name="TimeZone2" Type="Int32" />
+    <Property Name="TimeZone3" Type="Int32" />
+    <Property Name="verifystyle" Type="Int32" />
+  </EntityType>
+  <EntityType Name="USERINFO">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BADGENUMBER" Type="String" Nullable="false" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="SSN" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="NAME" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="GENDER" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="TITLE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="PAGER" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="BIRTHDAY" Type="DateTime" Precision="3" />
+    <Property Name="HIREDDAY" Type="DateTime" Precision="3" />
+    <Property Name="STREET" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="CITY" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="STATE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="ZIP" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <Property Name="OPHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="FPHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="VERIFICATIONMETHOD" Type="Int16" />
+    <Property Name="DEFAULTDEPTID" Type="Int16" />
+    <Property Name="SECURITYFLAGS" Type="Int16" />
+    <Property Name="ATT" Type="Int16" Nullable="false" />
+    <Property Name="INLATE" Type="Int16" Nullable="false" />
+    <Property Name="OUTEARLY" Type="Int16" Nullable="false" />
+    <Property Name="OVERTIME" Type="Int16" Nullable="false" />
+    <Property Name="SEP" Type="Int16" Nullable="false" />
+    <Property Name="HOLIDAY" Type="Int16" Nullable="false" />
+    <Property Name="MINZU" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LUNCHDURATION" Type="Int16" Nullable="false" />
+    <Property Name="MVerifyPass" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PHOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Notes" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="privilege" Type="Int32" />
+    <Property Name="InheritDeptSch" Type="Int16" />
+    <Property Name="InheritDeptSchClass" Type="Int16" />
+    <Property Name="AutoSchPlan" Type="Int16" />
+    <Property Name="MinAutoSchInterval" Type="Int32" />
+    <Property Name="RegisterOT" Type="Int16" />
+    <Property Name="InheritDeptRule" Type="Int16" />
+    <Property Name="EMPRIVILEGE" Type="Int16" />
+    <Property Name="CardNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UsersMachines">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="DEVICEID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="DEVICEID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserUpdates">
+    <Key>
+      <PropertyRef Name="UpdateId" />
+    </Key>
+    <Property Name="UpdateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BadgeNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UserUsedSClasses">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="SchId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="SchId" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

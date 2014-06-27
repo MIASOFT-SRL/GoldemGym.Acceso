@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A208176-F2F0-4CA8-8204-32A8D848FBA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoldemGym.Acceso</RootNamespace>
+    <AssemblyName>GoldemGym.Acceso</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Datos\ACGroup.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ACTimeZones.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ACUnlockComb.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\aDatosAcces.cs" />
+    <Compile Include="Datos\AlarmLog.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\AttParam.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\AuditedExc.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\AUTHDEVICE.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\CHECKEXACT.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\CHECKINOUT.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\dbContorlAcceso.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbContorlAcceso.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\dbContorlAcceso.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\dbContorlAcceso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbContorlAcceso.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DEPARTMENTS.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\DeptUsedSchs.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\EmOpLog.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\FaceTemp.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\gDatos.cs" />
+    <Compile Include="Datos\HOLIDAYS.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\LeaveClass.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\LeaveClass1.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Machines.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\NUM_RUN.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\NUM_RUN_DEIL.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ReportItem.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\SchClass.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\SECURITYDETAILS.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ServerLog.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\SHIFT.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\SystemLog.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TBSMSALLOT.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TBSMSINFO.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TEMPLATE.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\UserACMachines.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\UserACPrivilege.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\USERINFO.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\UsersMachines.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\UserUpdates.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\UserUsedSClasses.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\USER_OF_RUN.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\USER_SPEDAY.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\USER_TEMP_SCH.cs">
+      <DependentUpon>dbContorlAcceso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Datos\dbContorlAcceso.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbContorlAcceso.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Datos\dbContorlAcceso.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbContorlAcceso.edmx</DependentUpon>
+      <LastGenOutput>dbContorlAcceso.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\dbContorlAcceso.edmx.diagram">
+      <DependentUpon>dbContorlAcceso.edmx</DependentUpon>
+    </None>
+    <None Include="Datos\dbContorlAcceso.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbContorlAcceso.edmx</DependentUpon>
+      <LastGenOutput>dbContorlAcceso.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Logo.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\logo golden gim copia.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

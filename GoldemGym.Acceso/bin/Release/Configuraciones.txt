@@ -1,0 +1,1 @@
+K:\\att2000.mdb;192.168.1.201;SERV-DATOS;dbControlAcceso;gestion;$Ges123$5;1;2;5;20;0
